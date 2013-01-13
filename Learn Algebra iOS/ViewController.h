@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ChaptersViewController.h"
+#import "AboutPageViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
+    NSArray *homeButtons;
+}
 
 @end

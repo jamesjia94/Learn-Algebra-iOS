@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E1A623616A1049600440103 /* ExpandableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A623516A1049600440103 /* ExpandableTableView.m */; };
+		4E1A623916A104B100440103 /* ExpandableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A623816A104B100440103 /* ExpandableTableViewController.m */; };
+		4E1A624216A1052100440103 /* ChaptersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A624116A1052100440103 /* ChaptersViewController.m */; };
+		4E1A624A16A2274200440103 /* AboutPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A624916A2274200440103 /* AboutPageViewController.m */; };
 		4EF6AB2B169BAB00001D7246 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF6AB2A169BAB00001D7246 /* UIKit.framework */; };
 		4EF6AB2D169BAB00001D7246 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF6AB2C169BAB00001D7246 /* Foundation.framework */; };
 		4EF6AB2F169BAB00001D7246 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF6AB2E169BAB00001D7246 /* CoreGraphics.framework */; };
@@ -36,6 +40,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E1A623316A1048C00440103 /* ExpandableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpandableTableView.h; path = ../../../../.Trash/ExpandableTableView.h; sourceTree = "<group>"; };
+		4E1A623516A1049600440103 /* ExpandableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpandableTableView.m; path = ../../../../.Trash/ExpandableTableView.m; sourceTree = "<group>"; };
+		4E1A623716A104A700440103 /* ExpandableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpandableTableViewController.h; path = ../../../../.Trash/ExpandableTableViewController.h; sourceTree = "<group>"; };
+		4E1A623816A104B100440103 /* ExpandableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpandableTableViewController.m; path = ../../../../.Trash/ExpandableTableViewController.m; sourceTree = "<group>"; };
+		4E1A623A16A104BC00440103 /* ExpandableTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpandableTableViewDataSource.h; path = ../../../../.Trash/ExpandableTableViewDataSource.h; sourceTree = "<group>"; };
+		4E1A623F16A104E100440103 /* ExpandableTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpandableTableViewDelegate.h; path = ../../../../.Trash/ExpandableTableViewDelegate.h; sourceTree = "<group>"; };
+		4E1A624016A1052100440103 /* ChaptersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaptersViewController.h; sourceTree = "<group>"; };
+		4E1A624116A1052100440103 /* ChaptersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaptersViewController.m; sourceTree = "<group>"; };
+		4E1A624816A2274200440103 /* AboutPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutPageViewController.h; sourceTree = "<group>"; };
+		4E1A624916A2274200440103 /* AboutPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutPageViewController.m; sourceTree = "<group>"; };
 		4EF6AB26169BAB00001D7246 /* Learn Algebra iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn Algebra iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF6AB2A169BAB00001D7246 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4EF6AB2C169BAB00001D7246 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -84,6 +98,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E1A624716A20E6000440103 /* ExpandableTableView */ = {
+			isa = PBXGroup;
+			children = (
+				4E1A623316A1048C00440103 /* ExpandableTableView.h */,
+				4E1A623516A1049600440103 /* ExpandableTableView.m */,
+				4E1A623716A104A700440103 /* ExpandableTableViewController.h */,
+				4E1A623816A104B100440103 /* ExpandableTableViewController.m */,
+				4E1A623A16A104BC00440103 /* ExpandableTableViewDataSource.h */,
+				4E1A623F16A104E100440103 /* ExpandableTableViewDelegate.h */,
+			);
+			name = ExpandableTableView;
+			sourceTree = "<group>";
+		};
 		4EF6AB1B169BAB00001D7246 = {
 			isa = PBXGroup;
 			children = (
@@ -117,11 +144,16 @@
 		4EF6AB30169BAB00001D7246 /* Learn Algebra iOS */ = {
 			isa = PBXGroup;
 			children = (
+				4EF6AB42169BAB00001D7246 /* MainStoryboard.storyboard */,
 				4EF6AB39169BAB00001D7246 /* AppDelegate.h */,
 				4EF6AB3A169BAB00001D7246 /* AppDelegate.m */,
-				4EF6AB42169BAB00001D7246 /* MainStoryboard.storyboard */,
+				4E1A624816A2274200440103 /* AboutPageViewController.h */,
+				4E1A624916A2274200440103 /* AboutPageViewController.m */,
+				4E1A624016A1052100440103 /* ChaptersViewController.h */,
+				4E1A624116A1052100440103 /* ChaptersViewController.m */,
 				4EF6AB45169BAB00001D7246 /* ViewController.h */,
 				4EF6AB46169BAB00001D7246 /* ViewController.m */,
+				4E1A624716A20E6000440103 /* ExpandableTableView */,
 				4EF6AB31169BAB00001D7246 /* Supporting Files */,
 			);
 			path = "Learn Algebra iOS";
@@ -273,6 +305,10 @@
 				4EF6AB37169BAB00001D7246 /* main.m in Sources */,
 				4EF6AB3B169BAB00001D7246 /* AppDelegate.m in Sources */,
 				4EF6AB47169BAB00001D7246 /* ViewController.m in Sources */,
+				4E1A623616A1049600440103 /* ExpandableTableView.m in Sources */,
+				4E1A623916A104B100440103 /* ExpandableTableViewController.m in Sources */,
+				4E1A624216A1052100440103 /* ChaptersViewController.m in Sources */,
+				4E1A624A16A2274200440103 /* AboutPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +483,7 @@
 				4EF6AB61169BAB00001D7246 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EF6AB62169BAB00001D7246 /* Build configuration list for PBXNativeTarget "Learn Algebra iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +492,7 @@
 				4EF6AB64169BAB00001D7246 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
