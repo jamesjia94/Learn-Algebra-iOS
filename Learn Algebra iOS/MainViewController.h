@@ -10,8 +10,9 @@
 #import "ChaptersViewController.h"
 #import "AboutPageViewController.h"
 
-@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
+@interface MainViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
     NSArray *homeButtons;
+    //red
 }
 
 @end
