@@ -12,7 +12,6 @@
 
 @interface MainViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
     NSArray *homeButtons;
-    //red
 }
 
 @end

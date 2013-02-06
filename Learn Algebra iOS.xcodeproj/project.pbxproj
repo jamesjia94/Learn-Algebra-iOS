@@ -11,6 +11,15 @@
 		4E1A624A16A2274200440103 /* AboutPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A624916A2274200440103 /* AboutPageViewController.m */; };
 		4E281A7716A52DB800FEA85F /* ExpandableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E281A7216A52DB800FEA85F /* ExpandableTableView.m */; };
 		4E281A7816A52DB800FEA85F /* ExpandableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E281A7416A52DB800FEA85F /* ExpandableTableViewController.m */; };
+		4E281A7F16A6192000FEA85F /* LessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E281A7E16A6192000FEA85F /* LessonViewController.m */; };
+		4E8CFB7F16B7518700648642 /* iOS_Keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E8CFB7E16B7518700648642 /* iOS_Keyboard.png */; };
+		4E9EF55A16AE3801000433CA /* MathJaxHTML in Resources */ = {isa = PBXBuildFile; fileRef = 4E9EF55916AE3801000433CA /* MathJaxHTML */; };
+		4E9EF55C16AE3A02000433CA /* MathJax in Resources */ = {isa = PBXBuildFile; fileRef = 4E9EF55B16AE3A02000433CA /* MathJax */; };
+		4EB4076A16B3F95B00B5A0BA /* QuickNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4076916B3F95B00B5A0BA /* QuickNotesViewController.m */; };
+		4EB4076D16B3FF3100B5A0BA /* PracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4076C16B3FF3100B5A0BA /* PracticeViewController.m */; };
+		4EB8B5E316B33D8E0066A596 /* CustomKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8B5E216B33D8E0066A596 /* CustomKeyboard.m */; };
+		4EB8B5E616B341010066A596 /* CustomKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB8B5E516B341010066A596 /* CustomKeyboard.xib */; };
+		4EB8B5EF16B3CFBD0066A596 /* Quicknotes in Resources */ = {isa = PBXBuildFile; fileRef = 4EB8B5EE16B3CFBD0066A596 /* Quicknotes */; };
 		4EF6AB2B169BAB00001D7246 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF6AB2A169BAB00001D7246 /* UIKit.framework */; };
 		4EF6AB2D169BAB00001D7246 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF6AB2C169BAB00001D7246 /* Foundation.framework */; };
 		4EF6AB2F169BAB00001D7246 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF6AB2E169BAB00001D7246 /* CoreGraphics.framework */; };
@@ -50,6 +59,19 @@
 		4E281A7416A52DB800FEA85F /* ExpandableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpandableTableViewController.m; path = ExpandableList/ExpandableTableViewController.m; sourceTree = "<group>"; };
 		4E281A7516A52DB800FEA85F /* ExpandableTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpandableTableViewDataSource.h; path = ExpandableList/ExpandableTableViewDataSource.h; sourceTree = "<group>"; };
 		4E281A7616A52DB800FEA85F /* ExpandableTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpandableTableViewDelegate.h; path = ExpandableList/ExpandableTableViewDelegate.h; sourceTree = "<group>"; };
+		4E281A7D16A6192000FEA85F /* LessonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonViewController.h; sourceTree = "<group>"; };
+		4E281A7E16A6192000FEA85F /* LessonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonViewController.m; sourceTree = "<group>"; };
+		4E8CFB7E16B7518700648642 /* iOS_Keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iOS_Keyboard.png; sourceTree = "<group>"; };
+		4E9EF55916AE3801000433CA /* MathJaxHTML */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MathJaxHTML; sourceTree = "<group>"; };
+		4E9EF55B16AE3A02000433CA /* MathJax */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MathJax; sourceTree = "<group>"; };
+		4EB4076816B3F95B00B5A0BA /* QuickNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickNotesViewController.h; sourceTree = "<group>"; };
+		4EB4076916B3F95B00B5A0BA /* QuickNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickNotesViewController.m; sourceTree = "<group>"; };
+		4EB4076B16B3FF3100B5A0BA /* PracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeViewController.h; sourceTree = "<group>"; };
+		4EB4076C16B3FF3100B5A0BA /* PracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeViewController.m; sourceTree = "<group>"; };
+		4EB8B5E116B33D8E0066A596 /* CustomKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomKeyboard.h; sourceTree = "<group>"; };
+		4EB8B5E216B33D8E0066A596 /* CustomKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomKeyboard.m; sourceTree = "<group>"; };
+		4EB8B5E516B341010066A596 /* CustomKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomKeyboard.xib; sourceTree = "<group>"; };
+		4EB8B5EE16B3CFBD0066A596 /* Quicknotes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Quicknotes; sourceTree = SOURCE_ROOT; };
 		4EF6AB26169BAB00001D7246 /* Learn Algebra iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn Algebra iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF6AB2A169BAB00001D7246 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4EF6AB2C169BAB00001D7246 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -145,14 +167,27 @@
 			isa = PBXGroup;
 			children = (
 				4EF6AB42169BAB00001D7246 /* MainStoryboard.storyboard */,
+				4EB8B5E116B33D8E0066A596 /* CustomKeyboard.h */,
+				4EB8B5E216B33D8E0066A596 /* CustomKeyboard.m */,
+				4EB8B5E516B341010066A596 /* CustomKeyboard.xib */,
+				4E8CFB7E16B7518700648642 /* iOS_Keyboard.png */,
 				4EF6AB39169BAB00001D7246 /* AppDelegate.h */,
 				4EF6AB3A169BAB00001D7246 /* AppDelegate.m */,
-				4E1A624816A2274200440103 /* AboutPageViewController.h */,
-				4E1A624916A2274200440103 /* AboutPageViewController.m */,
-				4E1A624016A1052100440103 /* ChaptersViewController.h */,
-				4E1A624116A1052100440103 /* ChaptersViewController.m */,
 				4EF6AB45169BAB00001D7246 /* MainViewController.h */,
 				4EF6AB46169BAB00001D7246 /* MainViewController.m */,
+				4E1A624016A1052100440103 /* ChaptersViewController.h */,
+				4E1A624116A1052100440103 /* ChaptersViewController.m */,
+				4E281A7D16A6192000FEA85F /* LessonViewController.h */,
+				4E281A7E16A6192000FEA85F /* LessonViewController.m */,
+				4EB4076B16B3FF3100B5A0BA /* PracticeViewController.h */,
+				4EB4076C16B3FF3100B5A0BA /* PracticeViewController.m */,
+				4EB4076816B3F95B00B5A0BA /* QuickNotesViewController.h */,
+				4EB4076916B3F95B00B5A0BA /* QuickNotesViewController.m */,
+				4E1A624816A2274200440103 /* AboutPageViewController.h */,
+				4E1A624916A2274200440103 /* AboutPageViewController.m */,
+				4EB8B5EE16B3CFBD0066A596 /* Quicknotes */,
+				4E9EF55B16AE3A02000433CA /* MathJax */,
+				4E9EF55916AE3801000433CA /* MathJaxHTML */,
 				4E1A624716A20E6000440103 /* ExpandableTableView */,
 				4EF6AB31169BAB00001D7246 /* Supporting Files */,
 			);
@@ -268,6 +303,11 @@
 				4EF6AB3F169BAB00001D7246 /* Default@2x.png in Resources */,
 				4EF6AB41169BAB00001D7246 /* Default-568h@2x.png in Resources */,
 				4EF6AB44169BAB00001D7246 /* MainStoryboard.storyboard in Resources */,
+				4E9EF55A16AE3801000433CA /* MathJaxHTML in Resources */,
+				4E9EF55C16AE3A02000433CA /* MathJax in Resources */,
+				4EB8B5E616B341010066A596 /* CustomKeyboard.xib in Resources */,
+				4EB8B5EF16B3CFBD0066A596 /* Quicknotes in Resources */,
+				4E8CFB7F16B7518700648642 /* iOS_Keyboard.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +349,10 @@
 				4E1A624A16A2274200440103 /* AboutPageViewController.m in Sources */,
 				4E281A7716A52DB800FEA85F /* ExpandableTableView.m in Sources */,
 				4E281A7816A52DB800FEA85F /* ExpandableTableViewController.m in Sources */,
+				4E281A7F16A6192000FEA85F /* LessonViewController.m in Sources */,
+				4EB8B5E316B33D8E0066A596 /* CustomKeyboard.m in Sources */,
+				4EB4076A16B3F95B00B5A0BA /* QuickNotesViewController.m in Sources */,
+				4EB4076D16B3FF3100B5A0BA /* PracticeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

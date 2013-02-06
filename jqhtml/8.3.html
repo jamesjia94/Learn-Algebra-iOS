@@ -1,0 +1,27 @@
+
+<link rel="stylesheet" href="../jqMath/jqmath-0.3.0.css"><script src="../jqMath/jquery-1.4.3.min.js"></script><script src="../jqMath/jqmath-etc-0.3.0.min.js"></script>
+
+Thus far, we have manipulated equations and expressions into special forms to find the roots of an equation. There is, however, a formula that does this for you called the quadratic formula. It�s displayed below:<br />
+$$x={-b�\sqrt{b^2-4ac}}/{2a}$$<br />
+	If you aren�t interested in knowing why this formula works, you can skip the next paragraph or so. To get this formula, we rewrite the quadratic equation from standard form into this formula. You can see this below:<br />
+$$ax^2+bx+c=0<br />
+\\{ax^2+bx+c}/{a}\text{ }={0}/{a}<br />
+\\x^2 + {b}/{a}x+{c}/{a}=0<br />
+\\x^2+{b}/{a} x=-{c}/{a}$$<br />
+	We then complete the square by dividing the coefficient of the middle term by 2 and squaring it, then adding the resulting term to both sides.<br />
+$$x^2+{b}/{a} x+{b^2}/{4a}=-{c}/{a}+{b^2}/{4a}<br />
+\\(x+{b}/{2a})(x+{b}/{2a})=-{c}/{a}+{b^2}/{4a}<br />
+\\(x+{b}/{2a})^2=-{4ac}/{4a^2}+{b^2}/{4a^2}<br />
+\\(x+{b}/{2a})^2={b^2-4ac}/{4a^2}<br />
+\\(x+{b}/{2a})=�{\sqrt{b^2-4ac}}/{\sqrt{4a^2}}<br />
+\\x=-{b}/{2a}�{\sqrt{b^2-4ac}}/{2a}<br />
+\\x={-b�\sqrt{b^2-4ac}}/{2a}$$<br />
+	And that�s how you derive the quadratic formula. If you wanted to skip the proof of the quadratic formula, you can start reading again. To use this formula, you identify the a, b, and c coefficients from the quadratic polynomial, and merely stick them into the formula. If one of the terms is missing, then it is 0. For the equation $x^2-4=0$, a is 1, b is 0, and c is -4. By the quadratic formula, we would have:<br />
+$$x={0�\sqrt{0+16}}/{2}<br />
+\\x=�2$$<br />
+	To confirm, we can factor the original equation into $(x+2)(x-2)=0$, which we can then solve to yield the same solution, �2.<br />
+	You won�t always get whole number roots, however. In fact, the primary purpose of this formula is to find the roots to equations that don�t have easy-to-find whole number roots. For example, if we wanted to find the roots of $x^2+x-1=0$, we could try to complete the square, but we would get a rather ugly square. Instead, we&#8217;ll use the quadratic formula; it�ll still be ugly, but it�ll be much easier to find the roots. Both a and b in this case are 1, and c is -1. We can then put that into the formula and get:<br />
+$$x={1�\sqrt{1-4(-1)(1)}}/{2(1)}<br />
+\\x={1�\sqrt{5}}/{2}$$<br />
+	And those are our two roots.<br />
+	Another handy thing that we can do with the quadratic formula is identify the number of solutions to a quadratic and the types of these solutions. To do this, we look at the discriminant, which is equal to $b^2-4ac$. If the value of the expression is negative, then there are no real solutions to this equation. If it is zero, then there is one real solution, and if it is positive, then we have two solutions. </p>

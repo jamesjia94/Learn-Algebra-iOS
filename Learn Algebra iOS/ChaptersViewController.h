@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "ExpandableTableViewController.h"
+#import "LessonViewController.h"
+#import "QuickNotesViewController.h"
+#import "PracticeViewController.h"
 
-@interface ChaptersViewController :  ExpandableTableViewController <ExpandableTableViewDataSource, ExpandableTableViewDelegate>
-@property (weak, nonatomic) IBOutlet UINavigationItem *navigationTitle;
+@interface ChaptersViewController :  ExpandableTableViewController <ExpandableTableViewDataSource, ExpandableTableViewDelegate>{
+    NSMutableArray *dataModel;
+}
 @property (strong) NSMutableArray *dataModel;
 @end

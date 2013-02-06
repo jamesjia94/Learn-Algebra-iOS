@@ -565,7 +565,7 @@
 				[correctedIndexPaths addObject:[NSIndexPath indexPathForRow:indexPath.row + 1 inSection:indexPath.section]];
 			}
 			if ([self numberOfRowsInSection:indexPath.section] == 2) {
-				// we are delting the last cell in our section, we need to remove the header too
+				// we are deleting the last cell in our section, we need to remove the header too
 				[correctedIndexPaths addObject:[NSIndexPath indexPathForRow:0 inSection:indexPath.section]];
 				[_expandedSectionIndexes removeIndex:indexPath.section];
 			} else if (_ungroupSingleElement && [self numberOfRowsInSection:indexPath.section] == 3) {

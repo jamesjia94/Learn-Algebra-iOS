@@ -14,7 +14,6 @@
 
 @implementation ChaptersViewController
 @synthesize dataModel = _dataModel;
-@synthesize navigationTitle = _navigationTitle;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -34,8 +33,11 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    _dataModel = [NSMutableArray arrayWithObjects:
+    if ([self.navigationItem.title isEqualToString:@"Quicknotes"]){
+        _dataModel = [NSMutableArray arrayWithObject:[NSMutableArray arrayWithObjects:@"1.0", @"2.0", @"3.0", @"4.0", @"5.0", @"6.0", @"7.0", nil]];
+    }
+    else{
+        _dataModel = [NSMutableArray arrayWithObjects:
 				  [NSMutableArray arrayWithObjects:@"1.1 Building Blocks of Algebra", @"1.2 Solving Equations", @"1.3 Solving Inequalities", @"1.4 Ratio and Proportions", @"1.5 Exponents", @"1.6 Negative Exponents", @"1.7 Scientific Notation", nil],
 				  [NSMutableArray arrayWithObjects:@"2.1 Rectangular Coordinate System", @"2.2 Graphing by Plotting Points/Intercept", @"2.3 Graphing using slopes and y-intercepts", @"2.4 Parallel and Perpendicular Lines", @"2.5 Introduction to Functions", nil],
 				  [NSMutableArray arrayWithObjects:@"3.1 Systems of Equations by Substitution", @"3.2 Systems of Equations by Elimination", @"3.3 Systems of Equations by Graphing", nil],
@@ -45,7 +47,7 @@
                   [NSMutableArray arrayWithObjects: @"7.1 Introduction to Radicals", @"7.2 Simplifying Radical Expressions", @"7.3 Adding and Subtracting Radical Expressions", @"7.4 Multiplying and Dividing Radical Expressions", @"7.5 Rational Exponents", @"7.6 Solving Radical Equations", nil],
                   [NSMutableArray arrayWithObjects: @"8.1 Extracting Square Roots", @"8.2 Completing the Square", @"8.3 Quadratic Formula", @"8.4 Graphing Parabolas", nil],
 				  nil];
-
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -91,9 +93,16 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	
+    if ([self.navigationItem.title isEqualToString:@"Quicknotes"]){
+        cell.textLabel.text = @"Chapters";
+        [tableView expandSection:section];
+        cell.userInteractionEnabled=NO;
+    }
+    else{
 	cell.textLabel.text = [NSString stringWithFormat: @"Chapter %d", section+1];
+    }
 	
-	// We add a custom accessory view to indicate expanded and colapsed sections
+	// We add a custom accessory view to indicate expanded and collapsed sections
 	cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ExpandableAccessoryView"] highlightedImage:[UIImage imageNamed:@"ExpandableAccessoryView"]];
 	UIView *accessoryView = cell.accessoryView;
 	if ([[tableView indexesForExpandedSections] containsIndex:section]) {
@@ -104,8 +113,7 @@
     return cell;
 }
 
-// The next two methods are used to rotate the accessory view indicating whjether the
-// group is expanded or now
+// The next two methods are used to rotate the accessory view indicating wheether the group is expanded or not
 - (void)tableView:(ExpandableTableView *)tableView willExpandSection:(NSUInteger)section {
 	UITableViewCell *headerCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:section]];
 	[UIView animateWithDuration:0.3f animations:^{
@@ -119,7 +127,6 @@
 		headerCell.accessoryView.transform = CGAffineTransformMakeRotation(0);
 	}];
 }
-
 
 
 /*
@@ -165,13 +172,41 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    if ([self.navigationItem.title isEqualToString:@"Quicknotes"])
+    {
+        [self performSegueWithIdentifier:@"loadQuicknotes" sender:indexPath];
+    }
+    else if ([self.navigationItem.title isEqualToString:@"Practice"]){
+        [self performSegueWithIdentifier:@"loadPractice" sender:indexPath];
+    }
+    else{
+    [self performSegueWithIdentifier:@"loadChapter" sender:indexPath];
+    }
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"loadQuicknotes"]){
+        QuickNotesViewController *viewController = segue.destinationViewController;
+        NSIndexPath *indexPath = (NSIndexPath *)sender;
+        NSString *lessonName = [NSString stringWithFormat:@"%@", [[_dataModel objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]];
+        viewController.navigationItem.title = [NSString stringWithFormat:@"Quicknotes: %@", lessonName];
+        [viewController setLesson:lessonName];
+    }
+    else if ([[segue identifier] isEqualToString:@"loadPractice"]){
+        PracticeViewController *viewController = segue.destinationViewController;
+        NSIndexPath *indexPath = (NSIndexPath *)sender;
+         NSString *lessonName = [NSString stringWithFormat:@"%@", [[_dataModel objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]];
+        viewController.navigationItem.title = [NSString stringWithFormat:@"%@", lessonName];
+        [viewController setLesson: [NSString stringWithFormat:@"%.01f",lessonName.floatValue]];
+    }
+    else{
+	LessonViewController *viewController = segue.destinationViewController;
+        NSIndexPath *indexPath = (NSIndexPath *)sender;
+        NSString *lessonName = [NSString stringWithFormat:@"%@", [[_dataModel objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]];
+        viewController.navigationItem.title = [NSString stringWithFormat:@"%@", lessonName];
+        [viewController setLesson: [NSString stringWithFormat:@"%.01f",lessonName.floatValue]];
+	}
+}
+
 
 @end

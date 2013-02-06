@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="EfO-aD-3Hc" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EFE-AV-5pw">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -19,12 +19,57 @@
             </objects>
             <point key="canvasLocation" x="740" y="-588"/>
         </scene>
+        <!--Practice View Controller-->
+        <scene sceneID="Ucm-Gf-mxR">
+            <objects>
+                <viewController id="uSg-vC-LO2" customClass="PracticeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9g3-lp-AdD">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="caa-ML-8B5">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="234" id="Xl0-Ck-mNI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Display problem here" translatesAutoresizingMaskIntoConstraints="NO" id="lFM-aT-cg9">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Pc5-zE-NyD"/>
+                                    <constraint firstAttribute="width" constant="166" id="oGc-uB-fHe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lFM-aT-cg9" firstAttribute="centerX" secondItem="9g3-lp-AdD" secondAttribute="centerX" type="default" id="4eZ-m4-red"/>
+                            <constraint firstItem="lFM-aT-cg9" firstAttribute="centerX" secondItem="caa-ML-8B5" secondAttribute="centerX" type="default" id="BcH-h7-7kL"/>
+                            <constraint firstAttribute="bottom" secondItem="caa-ML-8B5" secondAttribute="bottom" constant="65" id="Dub-yw-zFl"/>
+                            <constraint firstItem="lFM-aT-cg9" firstAttribute="top" secondItem="9g3-lp-AdD" secondAttribute="top" constant="26" id="ldl-Fd-3tQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sQX-Jk-Zbd"/>
+                    <connections>
+                        <outlet property="textField" destination="caa-ML-8B5" id="Wan-5a-axh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7tI-Rb-51O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1286" y="-736"/>
+        </scene>
         <!--Main View Controller - Home-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="oID-2L-vtp">
@@ -48,10 +93,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oID-2L-vtp" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="H99-VA-GjU"/>
-                            <constraint firstItem="oID-2L-vtp" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="KZY-KH-yPH"/>
-                            <constraint firstItem="oID-2L-vtp" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="YJ9-Sl-eWW"/>
-                            <constraint firstItem="oID-2L-vtp" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="bmy-HG-6SJ"/>
+                            <constraint firstItem="oID-2L-vtp" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="E64-Sk-AFP"/>
+                            <constraint firstItem="oID-2L-vtp" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="i1K-ck-idc"/>
+                            <constraint firstItem="oID-2L-vtp" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="iwg-u9-ESz"/>
+                            <constraint firstItem="oID-2L-vtp" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="nQi-um-OUc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="nhk-ME-Yae"/>
@@ -70,7 +115,7 @@
             <objects>
                 <tableViewController id="kLM-xU-vgI" customClass="ChaptersViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tsG-Kt-DYz" customClass="ExpandableTableView">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -81,7 +126,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Group" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Bc-pS-P1u">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Group" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Bc-pS-P1u">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -97,7 +143,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Row" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzk-gd-nCn">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Row" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mzk-gd-nCn">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -114,19 +161,79 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="ouj-hl-K4y"/>
                     <connections>
-                        <outlet property="navigationTitle" destination="ouj-hl-K4y" id="4sd-pL-en7"/>
+                        <segue destination="rhH-Cq-iiE" kind="push" identifier="loadChapter" id="RzR-j0-hM9"/>
+                        <segue destination="whu-zi-h6i" kind="push" identifier="loadQuicknotes" id="9ex-ym-v9n"/>
+                        <segue destination="uSg-vC-LO2" kind="push" identifier="loadPractice" id="QYO-LJ-SXW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33G-MG-geo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1204" y="99"/>
+            <point key="canvasLocation" x="1286" y="34"/>
+        </scene>
+        <!--Quick Notes View Controller-->
+        <scene sceneID="qX7-Jc-vM7">
+            <objects>
+                <viewController id="whu-zi-h6i" customClass="QuickNotesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x7R-rr-bME">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bS4-IB-7Ly">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bS4-IB-7Ly" firstAttribute="top" secondItem="x7R-rr-bME" secondAttribute="top" type="default" id="Tzs-n7-apb"/>
+                            <constraint firstItem="bS4-IB-7Ly" firstAttribute="trailing" secondItem="x7R-rr-bME" secondAttribute="trailing" type="default" id="lpV-Fx-N7x"/>
+                            <constraint firstItem="bS4-IB-7Ly" firstAttribute="leading" secondItem="x7R-rr-bME" secondAttribute="leading" type="default" id="sHf-u5-szA"/>
+                            <constraint firstItem="bS4-IB-7Ly" firstAttribute="bottom" secondItem="x7R-rr-bME" secondAttribute="bottom" type="default" id="vAh-zZ-aYu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HII-zg-zDu"/>
+                    <connections>
+                        <outlet property="webView" destination="bS4-IB-7Ly" id="3aU-rX-D6c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SER-Ag-MeY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1819" y="370"/>
+        </scene>
+        <!--Lesson View Controller-->
+        <scene sceneID="gRO-ux-bIa">
+            <objects>
+                <viewController id="rhH-Cq-iiE" customClass="LessonViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u0W-dk-tPe">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHf-Ey-xPz">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GHf-Ey-xPz" firstAttribute="trailing" secondItem="u0W-dk-tPe" secondAttribute="trailing" type="default" id="2r1-oj-DMQ"/>
+                            <constraint firstItem="GHf-Ey-xPz" firstAttribute="bottom" secondItem="u0W-dk-tPe" secondAttribute="bottom" type="default" id="AYv-bf-T9v"/>
+                            <constraint firstItem="GHf-Ey-xPz" firstAttribute="leading" secondItem="u0W-dk-tPe" secondAttribute="leading" type="default" id="UBM-TV-mRS"/>
+                            <constraint firstItem="GHf-Ey-xPz" firstAttribute="top" secondItem="u0W-dk-tPe" secondAttribute="top" type="default" id="oAC-tF-Cjt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8hF-wg-u6n"/>
+                    <connections>
+                        <outlet property="webView" destination="GHf-Ey-xPz" id="5d8-rD-wQ6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iD7-5w-HJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1832" y="-335"/>
         </scene>
         <!--About Page View Controller - About-->
         <scene sceneID="VGV-WH-CIC">
             <objects>
                 <viewController id="oPE-7r-UWy" customClass="AboutPageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Zl-7l-lDu">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oed-99-geL">
@@ -136,10 +243,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oed-99-geL" firstAttribute="top" secondItem="0Zl-7l-lDu" secondAttribute="top" type="default" id="DUx-qK-mvx"/>
-                            <constraint firstItem="oed-99-geL" firstAttribute="bottom" secondItem="0Zl-7l-lDu" secondAttribute="bottom" type="default" id="HIf-dw-3Cw"/>
-                            <constraint firstItem="oed-99-geL" firstAttribute="trailing" secondItem="0Zl-7l-lDu" secondAttribute="trailing" type="default" id="eXY-ck-Rhq"/>
-                            <constraint firstItem="oed-99-geL" firstAttribute="leading" secondItem="0Zl-7l-lDu" secondAttribute="leading" type="default" id="gq6-0Y-pUp"/>
+                            <constraint firstItem="oed-99-geL" firstAttribute="bottom" secondItem="0Zl-7l-lDu" secondAttribute="bottom" type="default" id="5Ui-6i-cja"/>
+                            <constraint firstItem="oed-99-geL" firstAttribute="leading" secondItem="0Zl-7l-lDu" secondAttribute="leading" type="default" id="6Bb-NA-bwu"/>
+                            <constraint firstItem="oed-99-geL" firstAttribute="top" secondItem="0Zl-7l-lDu" secondAttribute="top" type="default" id="iea-DQ-IVp"/>
+                            <constraint firstItem="oed-99-geL" firstAttribute="trailing" secondItem="0Zl-7l-lDu" secondAttribute="trailing" type="default" id="vYY-NM-c9y"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="xBI-A5-3DG"/>
@@ -179,17 +286,41 @@
         </class>
         <class className="ChaptersViewController" superclassName="ExpandableTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ChaptersViewController.h"/>
+        </class>
+        <class className="ExpandableTableView" superclassName="UITableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExpandableTableView.h"/>
+        </class>
+        <class className="ExpandableTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExpandableTableViewController.h"/>
+        </class>
+        <class className="LessonViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LessonViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="navigationTitle" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
+        </class>
+        <class className="MainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PracticeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PracticeViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="QuickNotesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/QuickNotesViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

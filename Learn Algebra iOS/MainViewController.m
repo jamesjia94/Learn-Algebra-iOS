@@ -67,7 +67,7 @@
 //Get destination view
         ChaptersViewController *vc = [segue destinationViewController];
 //Pass the information to your destination view
-        [vc.navigationTitle setTitle: (NSString *) sender];
+        [vc.navigationItem setTitle: (NSString *) sender];
     }
 }
 
