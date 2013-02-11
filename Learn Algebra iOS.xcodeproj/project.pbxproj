@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E117EF616C7127E0023FEE6 /* AnsweredQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E117EF516C7127E0023FEE6 /* AnsweredQuestionViewController.m */; };
+		4E117EF816C8DDC20023FEE6 /* Practice in Resources */ = {isa = PBXBuildFile; fileRef = 4E117EF716C8DDC20023FEE6 /* Practice */; };
 		4E1A624216A1052100440103 /* ChaptersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A624116A1052100440103 /* ChaptersViewController.m */; };
 		4E1A624A16A2274200440103 /* AboutPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A624916A2274200440103 /* AboutPageViewController.m */; };
 		4E281A7716A52DB800FEA85F /* ExpandableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E281A7216A52DB800FEA85F /* ExpandableTableView.m */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		4E117EF416C7127E0023FEE6 /* AnsweredQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnsweredQuestionViewController.h; sourceTree = "<group>"; };
 		4E117EF516C7127E0023FEE6 /* AnsweredQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnsweredQuestionViewController.m; sourceTree = "<group>"; };
+		4E117EF716C8DDC20023FEE6 /* Practice */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Practice; sourceTree = SOURCE_ROOT; };
 		4E1A624016A1052100440103 /* ChaptersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaptersViewController.h; sourceTree = "<group>"; };
 		4E1A624116A1052100440103 /* ChaptersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaptersViewController.m; sourceTree = "<group>"; };
 		4E1A624816A2274200440103 /* AboutPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutPageViewController.h; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				4EB4076916B3F95B00B5A0BA /* QuickNotesViewController.m */,
 				4E1A624816A2274200440103 /* AboutPageViewController.h */,
 				4E1A624916A2274200440103 /* AboutPageViewController.m */,
+				4E117EF716C8DDC20023FEE6 /* Practice */,
 				4EB8B5EE16B3CFBD0066A596 /* Quicknotes */,
 				4E9EF55B16AE3A02000433CA /* MathJax */,
 				4E9EF55916AE3801000433CA /* MathJaxHTML */,
@@ -313,6 +316,7 @@
 				4EB8B5E616B341010066A596 /* CustomKeyboard.xib in Resources */,
 				4EB8B5EF16B3CFBD0066A596 /* Quicknotes in Resources */,
 				4E8CFB7F16B7518700648642 /* iOS_Keyboard.png in Resources */,
+				4E117EF816C8DDC20023FEE6 /* Practice in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

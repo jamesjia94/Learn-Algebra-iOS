@@ -38,8 +38,7 @@
     self.textField.inputView=customKeyboard;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
-    
-    //[self displayProblem];
+    [self displayProblem];
 }
 
 -(void) viewWillDisappear:(BOOL)animated{
@@ -48,7 +47,6 @@
 
 -(void) keyboardWillShow:(NSNotification *)notif{
     [self animateTextField: _textField up: YES];
-    NSLog(@"hi");
 }
 
 -(void) keyboardWillHide:(NSNotification *)notif{
@@ -67,7 +65,9 @@
         self.view.frame = CGRectOffset(self.view.frame, 0, movement);
     }
     else{
-        self.textField.frame = CGRectOffset(self.textField.frame, 0, movement);}
+        self.textField.frame = CGRectOffset(self.textField.frame, 0, movement);
+        self.promptDisplay.frame = CGRectOffset(self.promptDisplay.frame, 0, movement);
+    }
     
     [UIView commitAnimations];
 }
@@ -89,9 +89,8 @@
     }
 }
 -(void) displayProblem{
-    NSString *directory = [@"Practice/" stringByAppendingString:(_lesson)];
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                         pathForResource:_lesson ofType:@"json" inDirectory:directory]];
+                                         pathForResource:self.lesson ofType:@"json" inDirectory:@"Practice"]];
     NSData *data = [NSData dataWithContentsOfURL:url];
     NSError *error;
     NSDictionary *json =[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
