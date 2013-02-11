@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E117EF616C7127E0023FEE6 /* AnsweredQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E117EF516C7127E0023FEE6 /* AnsweredQuestionViewController.m */; };
 		4E1A624216A1052100440103 /* ChaptersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A624116A1052100440103 /* ChaptersViewController.m */; };
 		4E1A624A16A2274200440103 /* AboutPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A624916A2274200440103 /* AboutPageViewController.m */; };
 		4E281A7716A52DB800FEA85F /* ExpandableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E281A7216A52DB800FEA85F /* ExpandableTableView.m */; };
@@ -49,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E117EF416C7127E0023FEE6 /* AnsweredQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnsweredQuestionViewController.h; sourceTree = "<group>"; };
+		4E117EF516C7127E0023FEE6 /* AnsweredQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnsweredQuestionViewController.m; sourceTree = "<group>"; };
 		4E1A624016A1052100440103 /* ChaptersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaptersViewController.h; sourceTree = "<group>"; };
 		4E1A624116A1052100440103 /* ChaptersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaptersViewController.m; sourceTree = "<group>"; };
 		4E1A624816A2274200440103 /* AboutPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutPageViewController.h; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				4E281A7E16A6192000FEA85F /* LessonViewController.m */,
 				4EB4076B16B3FF3100B5A0BA /* PracticeViewController.h */,
 				4EB4076C16B3FF3100B5A0BA /* PracticeViewController.m */,
+				4E117EF416C7127E0023FEE6 /* AnsweredQuestionViewController.h */,
+				4E117EF516C7127E0023FEE6 /* AnsweredQuestionViewController.m */,
 				4EB4076816B3F95B00B5A0BA /* QuickNotesViewController.h */,
 				4EB4076916B3F95B00B5A0BA /* QuickNotesViewController.m */,
 				4E1A624816A2274200440103 /* AboutPageViewController.h */,
@@ -353,6 +358,7 @@
 				4EB8B5E316B33D8E0066A596 /* CustomKeyboard.m in Sources */,
 				4EB4076A16B3F95B00B5A0BA /* QuickNotesViewController.m in Sources */,
 				4EB4076D16B3FF3100B5A0BA /* PracticeViewController.m in Sources */,
+				4E117EF616C7127E0023FEE6 /* AnsweredQuestionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

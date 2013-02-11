@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CustomKeyboard.h"
+#import "AnsweredQuestionViewController.h"
 
 @interface PracticeViewController : UIViewController<UITextFieldDelegate>
 {

@@ -9,6 +9,10 @@
 #import "PracticeViewController.h"
 
 @interface PracticeViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *problemDisplay;
+@property (weak, nonatomic) IBOutlet UITextView *promptDisplay;
+@property (weak,nonatomic) NSString *answerString;
+@property (weak,nonatomic) NSString *explanationString;
 
 @end
 
@@ -34,6 +38,8 @@
     self.textField.inputView=customKeyboard;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
+    //[self displayProblem];
 }
 
 -(void) viewWillDisappear:(BOOL)animated{
@@ -42,6 +48,7 @@
 
 -(void) keyboardWillShow:(NSNotification *)notif{
     [self animateTextField: _textField up: YES];
+    NSLog(@"hi");
 }
 
 -(void) keyboardWillHide:(NSNotification *)notif{
@@ -64,4 +71,47 @@
     
     [UIView commitAnimations];
 }
+- (IBAction)clearText:(id)sender {
+    _textField.text=@"";
+}
+- (IBAction)submit:(id)sender {
+    [self performSegueWithIdentifier:@"answerViewSegue" sender:self];
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"answerViewSegue"]) {
+        AnsweredQuestionViewController *vc = [segue destinationViewController];
+        vc.answerDisplay.text=_answerString;
+        vc.explanationDisplay.text=_explanationString;
+        [vc setLesson:_lesson];
+        vc.navigationItem.title = self.navigationItem.title;
+        
+    }
+}
+-(void) displayProblem{
+    NSString *directory = [@"Practice/" stringByAppendingString:(_lesson)];
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                         pathForResource:_lesson ofType:@"json" inDirectory:directory]];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    NSError *error;
+    NSDictionary *json =[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    
+    NSArray *questionArray = [json objectForKey:@"questionArray"];
+    NSDictionary *pickedQuestion=[questionArray objectAtIndex:arc4random_uniform([questionArray count])];
+    self.answerString = [pickedQuestion objectForKey:@"answer"];
+    self.explanationString = [pickedQuestion objectForKey:@"explanation"];
+    NSString *prompt = [pickedQuestion objectForKey:@"prompt"];
+    NSString *question = [pickedQuestion objectForKey:@"question"];
+    _promptDisplay.text=prompt;
+    _problemDisplay.text=question;
+    [self resizeTextView: _problemDisplay];
+    [self resizeTextView: _promptDisplay];
+}
+
+-(void) resizeTextView: (UITextView *) textView{
+    CGRect frame = textView.frame;
+    frame.size.height = textView.contentSize.height;
+    textView.frame = frame;
+}
+
 @end
