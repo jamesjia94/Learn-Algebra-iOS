@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A9AF6AC16EFD65B002D1D03 /* jqMath in Resources */ = {isa = PBXBuildFile; fileRef = 1A9AF6AB16EFD65B002D1D03 /* jqMath */; };
 		4E117EF616C7127E0023FEE6 /* AnsweredQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E117EF516C7127E0023FEE6 /* AnsweredQuestionViewController.m */; };
 		4E117EF816C8DDC20023FEE6 /* Practice in Resources */ = {isa = PBXBuildFile; fileRef = 4E117EF716C8DDC20023FEE6 /* Practice */; };
 		4E1A624216A1052100440103 /* ChaptersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A624116A1052100440103 /* ChaptersViewController.m */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A9AF6AB16EFD65B002D1D03 /* jqMath */ = {isa = PBXFileReference; lastKnownFileType = folder; path = jqMath; sourceTree = "<group>"; };
 		4E117EF416C7127E0023FEE6 /* AnsweredQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnsweredQuestionViewController.h; sourceTree = "<group>"; };
 		4E117EF516C7127E0023FEE6 /* AnsweredQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnsweredQuestionViewController.m; sourceTree = "<group>"; };
 		4E117EF716C8DDC20023FEE6 /* Practice */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Practice; sourceTree = SOURCE_ROOT; };
@@ -192,6 +194,7 @@
 				4EB4076916B3F95B00B5A0BA /* QuickNotesViewController.m */,
 				4E1A624816A2274200440103 /* AboutPageViewController.h */,
 				4E1A624916A2274200440103 /* AboutPageViewController.m */,
+				1A9AF6AB16EFD65B002D1D03 /* jqMath */,
 				4E117EF716C8DDC20023FEE6 /* Practice */,
 				4EB8B5EE16B3CFBD0066A596 /* Quicknotes */,
 				4E9EF55B16AE3A02000433CA /* MathJax */,
@@ -317,6 +320,7 @@
 				4EB8B5EF16B3CFBD0066A596 /* Quicknotes in Resources */,
 				4E8CFB7F16B7518700648642 /* iOS_Keyboard.png in Resources */,
 				4E117EF816C8DDC20023FEE6 /* Practice in Resources */,
+				1A9AF6AC16EFD65B002D1D03 /* jqMath in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

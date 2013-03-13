@@ -9,7 +9,7 @@
 #import "PracticeViewController.h"
 
 @interface PracticeViewController ()
-@property (weak, nonatomic) IBOutlet UITextView *problemDisplay;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UITextView *promptDisplay;
 @property (weak,nonatomic) NSString *answerString;
 @property (weak,nonatomic) NSString *explanationString;
@@ -46,27 +46,28 @@
 }
 
 -(void) keyboardWillShow:(NSNotification *)notif{
-    [self animateTextField: _textField up: YES];
+    CGFloat keyboardHeight = [[[notif userInfo] objectForKey: UIKeyboardFrameBeginUserInfoKey] CGRectValue].size.height;
+    [self animateTextField: _textField up: YES height:keyboardHeight];
 }
 
 -(void) keyboardWillHide:(NSNotification *)notif{
-    [self animateTextField:_textField up: NO];
+    CGFloat keyboardHeight = [[[notif userInfo] objectForKey: UIKeyboardFrameBeginUserInfoKey] CGRectValue].size.height;
+    [self animateTextField:_textField up: NO height:keyboardHeight];
 }
-- (void) animateTextField: (UITextField*) textField up: (BOOL) up
+- (void) animateTextField: (UITextField*) textField up: (BOOL) up height: (CGFloat) height
 {
-    const int movementDistance = 160;
     const float movementDuration = 0.3f;
     
-    int movement = (up ? -movementDistance : movementDistance);
+    CGFloat movement = (up ? -height : height);
     [UIView beginAnimations: @"anim" context: nil];
     [UIView setAnimationBeginsFromCurrentState: YES];
     [UIView setAnimationDuration: movementDuration];
     if (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])){
-        self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+        self.view.frame = CGRectOffset(self.view.frame, 0, movement/3);
     }
     else{
-        self.textField.frame = CGRectOffset(self.textField.frame, 0, movement);
-        self.promptDisplay.frame = CGRectOffset(self.promptDisplay.frame, 0, movement);
+        self.textField.frame = CGRectOffset(self.textField.frame, 0, movement+50);
+        self.promptDisplay.frame = CGRectOffset(self.promptDisplay.frame, 0, movement+50);
     }
     
     [UIView commitAnimations];
@@ -94,16 +95,14 @@
     NSData *data = [NSData dataWithContentsOfURL:url];
     NSError *error;
     NSDictionary *json =[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    
-    NSArray *questionArray = [json objectForKey:@"questionArray"];
-    NSDictionary *pickedQuestion=[questionArray objectAtIndex:arc4random_uniform([questionArray count])];
+    NSArray *problemsArray = [json objectForKey:@"problemsArray"];
+    NSDictionary *pickedQuestion=[problemsArray objectAtIndex:arc4random_uniform([problemsArray count])];
     self.answerString = [pickedQuestion objectForKey:@"answer"];
     self.explanationString = [pickedQuestion objectForKey:@"explanation"];
     NSString *prompt = [pickedQuestion objectForKey:@"prompt"];
     NSString *question = [pickedQuestion objectForKey:@"question"];
     _promptDisplay.text=prompt;
-    _problemDisplay.text=question;
-    [self resizeTextView: _problemDisplay];
+    [_webView loadHTMLString:[NSString stringWithFormat:@"%@%@",question,jqMathString] baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
     [self resizeTextView: _promptDisplay];
 }
 

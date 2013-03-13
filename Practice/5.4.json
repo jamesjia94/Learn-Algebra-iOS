@@ -1,0 +1,6 @@
+{"problemsArray": [
+  {"type": "text", "question": "Problem0", "answer": "Solution0", "explanation": "Explanation0", "prompt": "x0 \u003d"},
+  {"type": "text", "question": "Problem1", "answer": "Solution1", "explanation": "Explanation1", "prompt": "x1 \u003d"},
+  {"type": "text", "question": "Problem2", "answer": "Solution2", "explanation": "Explanation2", "prompt": "x2 \u003d"},
+  {"type": "text", "question": "Problem3", "answer": "Solution3", "explanation": "Explanation3", "prompt": "x3 \u003d"}
+]}
