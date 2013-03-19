@@ -101,8 +101,23 @@
     self.explanationString = [pickedQuestion objectForKey:@"explanation"];
     NSString *prompt = [pickedQuestion objectForKey:@"prompt"];
     NSString *question = [pickedQuestion objectForKey:@"question"];
+    NSString *type = [pickedQuestion objectForKey:@"type"];
     _promptDisplay.text=prompt;
-    [_webView loadHTMLString:[NSString stringWithFormat:@"%@%@",question,jqMathString] baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
+    if ([type isEqualToString:JQMATH]){
+        [_webView loadHTMLString:[NSString stringWithFormat:@"%@%@",question,JQMATHHEADER] baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
+    }
+    else if ([type isEqualToString:GRAPH]){
+        
+    }
+    else if ([type isEqualToString:MC]){
+        
+    }
+    else if ([type isEqualToString:TEXT]){
+        [_webView loadHTMLString:question baseURL:nil];
+    }
+    else if ([type isEqualToString:MATHJAX]){
+        [_webView loadHTMLString:[NSString stringWithFormat:@"%@%@",question, MATHJAXHEADER] baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
+    }
     [self resizeTextView: _promptDisplay];
 }
 

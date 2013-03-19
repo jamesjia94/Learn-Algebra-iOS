@@ -9,7 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "CustomKeyboard.h"
 #import "AnsweredQuestionViewController.h"
-#define jqMathString @"<link rel=\"stylesheet\" href=\"jqMath/jqmath-0.3.0.css\"><script src=\"jqMath/jquery-1.4.3.min.js\"></script><script src=\"jqMath/jqmath-etc-0.3.0.min.js\"></script>"
+#define JQMATHHEADER @"<link rel=\"stylesheet\" href=\"jqMath/jqmath-0.3.0.css\"><script src=\"jqMath/jquery-1.4.3.min.js\"></script><script src=\"jqMath/jqmath-etc-0.3.0.min.js\"></script>"
+#define MATHJAXHEADER @"<script type='text/x-mathjax-config'>MathJax.Hub.Config({ messageStyle: \"simple\", showMathMenu: false, jax: ['input/TeX','output/HTML-CSS'], extensions: ['tex2jax.js'], TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'] } });</script><script type='text/javascript' src='MathJax/MathJax.js'></script>"
+#define TEXT @"text"
+#define MC @"mc"
+#define GRAPH @"graph"
+#define JQMATH @"jqmath"
+#define MATHJAX @"mathjax"
+
 @interface PracticeViewController : UIViewController<UITextFieldDelegate>
 {
     NSString *lesson;
