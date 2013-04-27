@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  Learn Algebra iOS
 //
-//  Created by XLab Developer on 1/7/13.
+//  Created by James Jia on 1/7/13.
 //  Copyright (c) 2013 ExEquals. All rights reserved.
 //
 

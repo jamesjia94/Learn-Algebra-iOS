@@ -3,7 +3,7 @@
 //  ExpandableTableView
 //
 //  Created by James Jia on 01/12/2013.
-//
+//  Credit for ExpandableTableView goes to wannabegeek @ github.com/wannabegeek/ExpandableTableView
 
 #import <Foundation/Foundation.h>
 
@@ -19,29 +19,13 @@
 
 - (BOOL)tableView:(ExpandableTableView *)tableView canRemoveSection:(NSUInteger)section;
 
-//- (CGFloat)tableView:(ExpandableTableView *)tableView heightForSection:(NSUInteger)section;
-//- (CGFloat)tableView:(ExpandableTableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 - (NSInteger)tableView:(ExpandableTableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath;
 - (void)tableView:(ExpandableTableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
 - (void)tableView:(ExpandableTableView *)tableView willDisplayCell:(UITableViewCell *)cell forSection:(NSUInteger)section;
-
-//- (void)tableView:(ExpandableTableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath;
 
 - (NSIndexPath *)tableView:(ExpandableTableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 - (void)tableView:(ExpandableTableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 - (NSIndexPath *)tableView:(ExpandableTableView *)tableView willDeselectRowAtIndexPath:(NSIndexPath *)indexPath;
 - (void)tableView:(ExpandableTableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath;
-
-//- (void)tableView:(ExpandableTableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath;
-//- (void)tableView:(ExpandableTableView *)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath;
-//- (UITableViewCellEditingStyle)tableView:(ExpandableTableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath;
-//- (NSString *)tableView:(ExpandableTableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath;
-//- (BOOL)tableView:(ExpandableTableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath;
-
-////- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath;
-
-//- (BOOL)tableView:(ExpandableTableView *)tableView shouldShowMenuForRowAtIndexPath:(NSIndexPath *)indexPath;
-//- (BOOL)tableView:(ExpandableTableView *)tableView canPerformAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender;
-//- (void)tableView:(ExpandableTableView *)tableView performAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender;
 
 @end

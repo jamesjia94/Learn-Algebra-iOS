@@ -2,7 +2,7 @@
 //  ViewController.h
 //  Learn Algebra iOS
 //
-//  Created by XLab Developer on 1/7/13.
+//  Created by James Jia on 1/7/13.
 //  Copyright (c) 2013 ExEquals. All rights reserved.
 //
 
@@ -10,6 +10,13 @@
 #import "ChaptersViewController.h"
 #import "AboutPageViewController.h"
 
+/**
+ \mainpage To look for documentation, please click on the classes tab.
+ 
+ */
+/**
+ UIViewController that controls the home screen.
+ */
 @interface MainViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
     NSArray *homeButtons;
 }

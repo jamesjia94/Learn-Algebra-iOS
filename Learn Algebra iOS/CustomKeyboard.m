@@ -2,15 +2,43 @@
 //  CustomKeyboard.m
 //  Learn Algebra iOS
 //
-//  Created by XLab Developer on 1/25/13.
+//  Created by James Jia on 1/25/13.
 //  Copyright (c) 2013 ExEquals. All rights reserved.
 //
 
 #import "CustomKeyboard.h"
+#define kChar @[ @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"0", @"(", @"x", @"y", @"+", @"-", @"*", @"/", @"=", @"^", @"√", @".", @")", @"<", @">", @",", @" ", @" ", @" ", @" ", @" "]
+
+@interface CustomKeyboard()
+/**
+ Sets the title of each button in self.characterKeys to be its corresponding character defined in kChar array.  Assumes the number of characters and buttons are equal.
+ */
+-(void)loadCharactersWithArray:(NSArray *)a;
+
+/**
+ Sets the _textField ivar to point to the passed in textField.
+ */
+-(void)setTextField:(id<UITextInput>)textField;
+
+/**
+ Returns the textField that _textField ivar is pointing to.
+ */
+-(id<UITextInput>)textField;
+
+/**
+ Removes a character from the current text in _textField ivar.
+ */
+- (IBAction)deletePressed:(id)sender;
+
+/**
+ Updates the _textField ivar.  If button title is "Space", add an empty space. If button title is "Return", resign the textfield as the first responder.
+ */
+- (IBAction)characterPressed:(id)sender;
+@end
 
 @implementation CustomKeyboard
 @synthesize textField=_textField;
-#define kChar @[ @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"0", @"(", @"x", @"y", @"+", @"-", @"*", @"/", @"=", @"^", @"√", @".", @")", @"<", @">", @",", @" ", @" ", @" ", @" ", @" "]
+
 - (id)init{
 	if (self) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CustomKeyboard" owner:self options:nil];
@@ -62,14 +90,5 @@
     }
     [[NSNotificationCenter defaultCenter] postNotificationName:UITextFieldTextDidChangeNotification object:self.textField];
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

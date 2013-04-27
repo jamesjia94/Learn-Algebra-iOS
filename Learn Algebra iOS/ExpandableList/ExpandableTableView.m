@@ -3,7 +3,7 @@
 //  ExpandableTableView
 //
 //  Created by James Jia on 01/12/2013.
-//
+//  Credit for ExpandableTableView goes to wannabegeek @ github.com/wannabegeek/ExpandableTableView
 
 #import "ExpandableTableView.h"
 
@@ -394,9 +394,7 @@
 				if ([_expandedSectionIndexes containsIndex:newIndexPath.section]) {
 					newIndexPath = [NSIndexPath indexPathForRow:newIndexPath.row + 1 inSection:newIndexPath.section];
 				} else if (newIndexPath.row == 0 && _ungroupSingleElement) {
-					// newIndexPath should stay the same
 				} else {
-					// we can't select a row that isn't visible
 					newIndexPath = nil;
 				}
 			}
@@ -408,9 +406,7 @@
 				if ([_expandedSectionIndexes containsIndex:newIndexPath.section]) {
 					newIndexPath = [NSIndexPath indexPathForRow:newIndexPath.row + 1 inSection:newIndexPath.section];
 				} else if (newIndexPath.row == 0 && _ungroupSingleElement) {
-					// newIndexPath should stay the same
 				} else {
-					// we can't select a row that isn't visible
 					newIndexPath = nil;
 				}
 			}
@@ -422,9 +418,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	// either expand the section or call the  delegates method if already expanded
 	if ([_expandedSectionIndexes containsIndex:indexPath.section]) {
-		// we're already expanded
 		if (indexPath.row == 0) {
-			// close the section
 			[self contractSection:indexPath.section];
 			[super deselectRowAtIndexPath:indexPath animated:YES];
 		} else {
@@ -447,12 +441,10 @@
 	if ([_expandedSectionIndexes containsIndex:indexPath.section] && indexPath.row != 0) {
 		if ([_expandableDelegate respondsToSelector:@selector(tableView:willDeselectRowAtIndexPath:)]) {
 			newIndexPath = [_expandableDelegate tableView:self willDeselectRowAtIndexPath:[NSIndexPath indexPathForRow:indexPath.row - 1 inSection:indexPath.section]];
-			// TODO: correct the new indexPath
 		}
 	} else if (indexPath.row == 0 && _ungroupSingleElement && [self numberOfRowsInSection:indexPath.section] == 1) {
 		if ([_expandableDelegate respondsToSelector:@selector(tableView:willDeselectRowAtIndexPath:)]) {
 			newIndexPath = [_expandableDelegate tableView:self willDeselectRowAtIndexPath:indexPath];
-			// TODO: correct the new indexPath
 		}
 	}	
 	return newIndexPath;
@@ -469,14 +461,6 @@
 		}
 	}	
 }
-
-/*
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
-	if ([_expandableDataSource respondsToSelector:@selector(tableView:moveRowAtIndexPath:toIndexPath:)]) {
-		[_expandableDataSource tableView:self moveRowAtIndexPath:sourceIndexPath toIndexPath:destinationIndexPath];
-	}
-}
-*/
 
 - (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath {
 	NSLog(@"Proposed Location: %@", proposedDestinationIndexPath);

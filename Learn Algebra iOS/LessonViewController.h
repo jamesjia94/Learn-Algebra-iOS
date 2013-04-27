@@ -2,12 +2,15 @@
 //  LessonViewController.h
 //  Learn Algebra iOS
 //
-//  Created by XLab Developer on 1/15/13.
+//  Created by James Jia on 1/15/13.
 //  Copyright (c) 2013 ExEquals. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
+/**
+ View Controller that handles displaying UITableView that contains all the lessons as well as a UIWebView that displays the contents of that lesson.
+ */
 @interface LessonViewController : UIViewController
 {
     NSString *lesson;

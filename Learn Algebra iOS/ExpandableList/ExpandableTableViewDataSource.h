@@ -3,7 +3,7 @@
 //  ExpandableTableView
 //
 //  Created by James Jia on 01/12/2013.
-//
+//  Credit for ExpandableTableView goes to wannabegeek @ github.com/wannabegeek/ExpandableTableView
 
 #import <Foundation/Foundation.h>
 
@@ -21,7 +21,6 @@
 - (BOOL)tableView:(ExpandableTableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath;
 - (BOOL)tableView:(ExpandableTableView *)tableView canEditSection:(NSInteger)section;
 - (BOOL)tableView:(ExpandableTableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath;
-//- (void)tableView:(ExpandableTableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath;
 - (NSString *)tableView:(ExpandableTableView *)tableView titleForFooterInSection:(NSInteger)section;
 - (NSString *)tableView:(ExpandableTableView *)tableView titleForHeaderInSection:(NSInteger)section;
 

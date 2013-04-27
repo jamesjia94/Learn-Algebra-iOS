@@ -1,20 +1,18 @@
 //
-//  LessonViewController.m
+//  StatsViewController.m
 //  Learn Algebra iOS
 //
-//  Created by James Jia on 1/15/13.
+//  Created by James Jia on 4/4/13.
 //  Copyright (c) 2013 ExEquals. All rights reserved.
 //
 
-#import "LessonViewController.h"
+#import "StatsViewController.h"
 
-@interface LessonViewController ()
+@interface StatsViewController ()
 
 @end
 
-@implementation LessonViewController
-@synthesize webView = _webView;
-@synthesize lesson = _lesson;
+@implementation StatsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,9 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view.
-    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:_lesson ofType:@"html" inDirectory:@"MathJaxHTML"]];
-    [_webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
 - (void)didReceiveMemoryWarning

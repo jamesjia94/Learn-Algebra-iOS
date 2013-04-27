@@ -1,0 +1,4 @@
+{"problemsArray": [
+  {"type": "mc", "question": "Pick the right one.", "answer": "this.", "explanation": "of course!", "prompt": "hi", "alternatives": ["that.", "other.", "lie.", "why?"]},
+  {"type": "mc", "question": "Question here", "answer": "yay.", "explanation": "of course!", "alternatives": ["1", "2", "3"]}
+]}

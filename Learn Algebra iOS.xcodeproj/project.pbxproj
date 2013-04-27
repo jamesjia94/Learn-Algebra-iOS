@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A5BE531170529990045E2F9 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A5BE530170529990045E2F9 /* Data.plist */; };
 		1A9AF6AC16EFD65B002D1D03 /* jqMath in Resources */ = {isa = PBXBuildFile; fileRef = 1A9AF6AB16EFD65B002D1D03 /* jqMath */; };
+		1AACE146170E7676008005A0 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AACE145170E7676008005A0 /* StatsViewController.m */; };
 		4E117EF616C7127E0023FEE6 /* AnsweredQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E117EF516C7127E0023FEE6 /* AnsweredQuestionViewController.m */; };
 		4E117EF816C8DDC20023FEE6 /* Practice in Resources */ = {isa = PBXBuildFile; fileRef = 4E117EF716C8DDC20023FEE6 /* Practice */; };
 		4E1A624216A1052100440103 /* ChaptersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A624116A1052100440103 /* ChaptersViewController.m */; };
@@ -52,7 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A5BE530170529990045E2F9 /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
 		1A9AF6AB16EFD65B002D1D03 /* jqMath */ = {isa = PBXFileReference; lastKnownFileType = folder; path = jqMath; sourceTree = "<group>"; };
+		1AACE144170E7676008005A0 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
+		1AACE145170E7676008005A0 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		4E117EF416C7127E0023FEE6 /* AnsweredQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnsweredQuestionViewController.h; sourceTree = "<group>"; };
 		4E117EF516C7127E0023FEE6 /* AnsweredQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnsweredQuestionViewController.m; sourceTree = "<group>"; };
 		4E117EF716C8DDC20023FEE6 /* Practice */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Practice; sourceTree = SOURCE_ROOT; };
@@ -180,20 +185,22 @@
 				4E8CFB7E16B7518700648642 /* iOS_Keyboard.png */,
 				4EF6AB39169BAB00001D7246 /* AppDelegate.h */,
 				4EF6AB3A169BAB00001D7246 /* AppDelegate.m */,
-				4EF6AB45169BAB00001D7246 /* MainViewController.h */,
-				4EF6AB46169BAB00001D7246 /* MainViewController.m */,
+				4E1A624816A2274200440103 /* AboutPageViewController.h */,
+				4E1A624916A2274200440103 /* AboutPageViewController.m */,
+				4E117EF416C7127E0023FEE6 /* AnsweredQuestionViewController.h */,
+				4E117EF516C7127E0023FEE6 /* AnsweredQuestionViewController.m */,
 				4E1A624016A1052100440103 /* ChaptersViewController.h */,
 				4E1A624116A1052100440103 /* ChaptersViewController.m */,
 				4E281A7D16A6192000FEA85F /* LessonViewController.h */,
 				4E281A7E16A6192000FEA85F /* LessonViewController.m */,
+				4EF6AB45169BAB00001D7246 /* MainViewController.h */,
+				4EF6AB46169BAB00001D7246 /* MainViewController.m */,
 				4EB4076B16B3FF3100B5A0BA /* PracticeViewController.h */,
 				4EB4076C16B3FF3100B5A0BA /* PracticeViewController.m */,
-				4E117EF416C7127E0023FEE6 /* AnsweredQuestionViewController.h */,
-				4E117EF516C7127E0023FEE6 /* AnsweredQuestionViewController.m */,
 				4EB4076816B3F95B00B5A0BA /* QuickNotesViewController.h */,
 				4EB4076916B3F95B00B5A0BA /* QuickNotesViewController.m */,
-				4E1A624816A2274200440103 /* AboutPageViewController.h */,
-				4E1A624916A2274200440103 /* AboutPageViewController.m */,
+				1AACE144170E7676008005A0 /* StatsViewController.h */,
+				1AACE145170E7676008005A0 /* StatsViewController.m */,
 				1A9AF6AB16EFD65B002D1D03 /* jqMath */,
 				4E117EF716C8DDC20023FEE6 /* Practice */,
 				4EB8B5EE16B3CFBD0066A596 /* Quicknotes */,
@@ -209,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				4EF6AB32169BAB00001D7246 /* Learn Algebra iOS-Info.plist */,
+				1A5BE530170529990045E2F9 /* Data.plist */,
 				4EF6AB33169BAB00001D7246 /* InfoPlist.strings */,
 				4EF6AB36169BAB00001D7246 /* main.m */,
 				4EF6AB38169BAB00001D7246 /* Learn Algebra iOS-Prefix.pch */,
@@ -321,6 +329,7 @@
 				4E8CFB7F16B7518700648642 /* iOS_Keyboard.png in Resources */,
 				4E117EF816C8DDC20023FEE6 /* Practice in Resources */,
 				1A9AF6AC16EFD65B002D1D03 /* jqMath in Resources */,
+				1A5BE531170529990045E2F9 /* Data.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +376,7 @@
 				4EB4076A16B3F95B00B5A0BA /* QuickNotesViewController.m in Sources */,
 				4EB4076D16B3FF3100B5A0BA /* PracticeViewController.m in Sources */,
 				4E117EF616C7127E0023FEE6 /* AnsweredQuestionViewController.m in Sources */,
+				1AACE146170E7676008005A0 /* StatsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

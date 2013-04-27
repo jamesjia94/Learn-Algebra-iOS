@@ -2,7 +2,7 @@
 //  PracticeViewController.m
 //  Learn Algebra iOS
 //
-//  Created by XLab Developer on 1/26/13.
+//  Created by James Jia on 1/26/13.
 //  Copyright (c) 2013 ExEquals. All rights reserved.
 //
 
@@ -11,12 +11,69 @@
 @interface PracticeViewController ()
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UITextView *promptDisplay;
-@property (weak,nonatomic) NSString *answerString;
-@property (weak,nonatomic) NSString *explanationString;
+@property  NSString *answerString;
+@property  NSString *explanationString;
+@property NSString *typeString;
 
+/**
+ Implements UITextFieldDelegate method. Resigns first responder of textfield.
+ */
+- (BOOL)textFieldShouldReturn:(UITextField *)textField;
+
+/**
+ Overrides UIWindow method and calls animateTextField.
+ */
+-(void) keyboardWillShow:(NSNotification *)notif;
+
+/**
+ Overrides UIWindow method and calls animateTextField.
+ */
+-(void) keyboardWillHide:(NSNotification *)notif;
+
+/**
+ Helper method that ensures that the keyboard does not cover up the textfield.
+ */
+- (void) animateTextField: (UITextField*) textField up: (BOOL) up height: (CGFloat) height;
+
+/**
+ Removes this from NSNotificationCenter - was used to observe UIKeyboardWillShow/Hide Notification.
+ */
+- (void) viewWillDisappear:(BOOL)animated;
+
+/**
+ Clears the text from the textfield.
+ */
+- (IBAction)clearText:(id)sender;
+
+/**
+ IBAction method that pushes AnswerViewController onto the stack.
+ */
+- (IBAction)submit:(id)sender;
+
+/**
+ Sends the appropriate data/initalizes ivars before segueing.  
+ */
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
+
+/**
+ Displays the appropriate problem from the JSON file using the corresponding modules if necessary to render the math problem. TODO: Graphs using 2D Quartz?
+ */
+-(void) displayProblem;
+
+/**
+ Resizes the textview to fit the content grabbed from JSON file.
+ */
+-(void) resizeTextView: (UITextView *) textView;
+
+/**
+ Resigns textfield as the first responder when the user taps outside of the keyboard.
+ */
+-(IBAction) dismissTextField:(UIGestureRecognizer *) sender;
 @end
 
 @implementation PracticeViewController
+@synthesize explanationString=_explanationString;
+@synthesize answerString = _answerString;
 @synthesize lesson=_lesson;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -37,14 +94,19 @@
     self.textField.delegate = self;
     self.textField.inputView=customKeyboard;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
-   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     [self displayProblem];
 }
 
--(void) viewWillDisappear:(BOOL)animated{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+#pragma mark UITextFieldDelegate methods
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
 }
 
+#pragma mark UIWindow methods
 -(void) keyboardWillShow:(NSNotification *)notif{
     CGFloat keyboardHeight = [[[notif userInfo] objectForKey: UIKeyboardFrameBeginUserInfoKey] CGRectValue].size.height;
     [self animateTextField: _textField up: YES height:keyboardHeight];
@@ -54,6 +116,7 @@
     CGFloat keyboardHeight = [[[notif userInfo] objectForKey: UIKeyboardFrameBeginUserInfoKey] CGRectValue].size.height;
     [self animateTextField:_textField up: NO height:keyboardHeight];
 }
+
 - (void) animateTextField: (UITextField*) textField up: (BOOL) up height: (CGFloat) height
 {
     const float movementDuration = 0.3f;
@@ -72,9 +135,17 @@
     
     [UIView commitAnimations];
 }
+
+#pragma mark private methods
+
+-(void) viewWillDisappear:(BOOL)animated{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (IBAction)clearText:(id)sender {
     _textField.text=@"";
 }
+
 - (IBAction)submit:(id)sender {
     [self performSegueWithIdentifier:@"answerViewSegue" sender:self];
 }
@@ -82,13 +153,15 @@
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([[segue identifier] isEqualToString:@"answerViewSegue"]) {
         AnsweredQuestionViewController *vc = [segue destinationViewController];
-        vc.answerDisplay.text=_answerString;
-        vc.explanationDisplay.text=_explanationString;
+        [vc setExplanationString:_explanationString];
+        [vc setAnswerString:_answerString];
         [vc setLesson:_lesson];
+        [vc setTypeString:_typeString];
+        [vc setTextFieldString:self.textField.text];
         vc.navigationItem.title = self.navigationItem.title;
-        
     }
 }
+
 -(void) displayProblem{
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                          pathForResource:self.lesson ofType:@"json" inDirectory:@"Practice"]];
@@ -101,21 +174,21 @@
     self.explanationString = [pickedQuestion objectForKey:@"explanation"];
     NSString *prompt = [pickedQuestion objectForKey:@"prompt"];
     NSString *question = [pickedQuestion objectForKey:@"question"];
-    NSString *type = [pickedQuestion objectForKey:@"type"];
+    self.typeString= [pickedQuestion objectForKey:@"type"];
     _promptDisplay.text=prompt;
-    if ([type isEqualToString:JQMATH]){
+    if ([_typeString isEqualToString:JQMATH]){
         [_webView loadHTMLString:[NSString stringWithFormat:@"%@%@",question,JQMATHHEADER] baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
     }
-    else if ([type isEqualToString:GRAPH]){
+    else if ([_typeString isEqualToString:GRAPH]){
         
     }
-    else if ([type isEqualToString:MC]){
+    else if ([_typeString isEqualToString:MC]){
         
     }
-    else if ([type isEqualToString:TEXT]){
+    else if ([_typeString isEqualToString:TEXT]){
         [_webView loadHTMLString:question baseURL:nil];
     }
-    else if ([type isEqualToString:MATHJAX]){
+    else if ([_typeString isEqualToString:MATHJAX]){
         [_webView loadHTMLString:[NSString stringWithFormat:@"%@%@",question, MATHJAXHEADER] baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
     }
     [self resizeTextView: _promptDisplay];
@@ -127,4 +200,7 @@
     textView.frame = frame;
 }
 
+-(IBAction) dismissTextField:(UIGestureRecognizer *) sender{
+    [self.textField resignFirstResponder];
+}
 @end

@@ -2,12 +2,15 @@
 //  QuickNotesViewController.h
 //  Learn Algebra iOS
 //
-//  Created by XLab Developer on 1/26/13.
+//  Created by James Jia on 1/26/13.
 //  Copyright (c) 2013 ExEquals. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
+/**
+ View controller that handles the display of the QuickNotes html.
+ */
 @interface QuickNotesViewController : UIViewController
 {
     NSString *lesson;

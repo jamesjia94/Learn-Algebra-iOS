@@ -2,7 +2,7 @@
 //  PracticeViewController.h
 //  Learn Algebra iOS
 //
-//  Created by XLab Developer on 1/26/13.
+//  Created by James Jia on 1/26/13.
 //  Copyright (c) 2013 ExEquals. All rights reserved.
 //
 
@@ -17,11 +17,15 @@
 #define JQMATH @"jqmath"
 #define MATHJAX @"mathjax"
 
+/**
+ View Controller that handles the display of a problem by parsing the appropriate JSON file and randomly generating a problem from the JSON.
+ */
+
 @interface PracticeViewController : UIViewController<UITextFieldDelegate>
 {
     NSString *lesson;
 }
 @property (strong, nonatomic) IBOutlet UITextField *textField;
 @property NSString *lesson;
-
+- (IBAction)dismissTextField:(UIGestureRecognizer *)sender;
 @end
