@@ -80,9 +80,9 @@
 		4EB4076916B3F95B00B5A0BA /* QuickNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickNotesViewController.m; sourceTree = "<group>"; };
 		4EB4076B16B3FF3100B5A0BA /* PracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeViewController.h; sourceTree = "<group>"; };
 		4EB4076C16B3FF3100B5A0BA /* PracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeViewController.m; sourceTree = "<group>"; };
-		4EB8B5E116B33D8E0066A596 /* CustomKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomKeyboard.h; sourceTree = "<group>"; };
-		4EB8B5E216B33D8E0066A596 /* CustomKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomKeyboard.m; sourceTree = "<group>"; };
-		4EB8B5E516B341010066A596 /* CustomKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomKeyboard.xib; sourceTree = "<group>"; };
+		4EB8B5E116B33D8E0066A596 /* CustomKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomKeyboard.h; path = "Learn Algebra iOS/CustomKeyboard.h"; sourceTree = "<group>"; };
+		4EB8B5E216B33D8E0066A596 /* CustomKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomKeyboard.m; path = "Learn Algebra iOS/CustomKeyboard.m"; sourceTree = "<group>"; };
+		4EB8B5E516B341010066A596 /* CustomKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomKeyboard.xib; path = "Learn Algebra iOS/CustomKeyboard.xib"; sourceTree = "<group>"; };
 		4EB8B5EE16B3CFBD0066A596 /* Quicknotes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Quicknotes; sourceTree = SOURCE_ROOT; };
 		4EF6AB26169BAB00001D7246 /* Learn Algebra iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn Algebra iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF6AB2A169BAB00001D7246 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -132,6 +132,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A48A7DD174EEFF700BC3AF6 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4EB8B5E116B33D8E0066A596 /* CustomKeyboard.h */,
+				4EB8B5E216B33D8E0066A596 /* CustomKeyboard.m */,
+				4EB8B5E516B341010066A596 /* CustomKeyboard.xib */,
+			);
+			name = Keyboard;
+			sourceTree = "<group>";
+		};
 		4E1A624716A20E6000440103 /* ExpandableTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +158,7 @@
 		4EF6AB1B169BAB00001D7246 = {
 			isa = PBXGroup;
 			children = (
+				1A48A7DD174EEFF700BC3AF6 /* Keyboard */,
 				4EF6AB30169BAB00001D7246 /* Learn Algebra iOS */,
 				4EF6AB54169BAB00001D7246 /* Learn Algebra iOSTests */,
 				4EF6AB29169BAB00001D7246 /* Frameworks */,
@@ -179,9 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				4EF6AB42169BAB00001D7246 /* MainStoryboard.storyboard */,
-				4EB8B5E116B33D8E0066A596 /* CustomKeyboard.h */,
-				4EB8B5E216B33D8E0066A596 /* CustomKeyboard.m */,
-				4EB8B5E516B341010066A596 /* CustomKeyboard.xib */,
 				4E8CFB7E16B7518700648642 /* iOS_Keyboard.png */,
 				4EF6AB39169BAB00001D7246 /* AppDelegate.h */,
 				4EF6AB3A169BAB00001D7246 /* AppDelegate.m */,
@@ -215,8 +223,8 @@
 		4EF6AB31169BAB00001D7246 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4EF6AB32169BAB00001D7246 /* Learn Algebra iOS-Info.plist */,
 				1A5BE530170529990045E2F9 /* Data.plist */,
+				4EF6AB32169BAB00001D7246 /* Learn Algebra iOS-Info.plist */,
 				4EF6AB33169BAB00001D7246 /* InfoPlist.strings */,
 				4EF6AB36169BAB00001D7246 /* main.m */,
 				4EF6AB38169BAB00001D7246 /* Learn Algebra iOS-Prefix.pch */,

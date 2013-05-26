@@ -3,8 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Chapters</key>
-	<dict>
-		<key>Chapter 1</key>
+	<array>
 		<dict>
 			<key>1.1</key>
 			<array>
@@ -42,7 +41,6 @@
 				<integer>0</integer>
 			</array>
 		</dict>
-		<key>Chapter 2</key>
 		<dict>
 			<key>2.1</key>
 			<array>
@@ -75,7 +73,6 @@
 				<integer>0</integer>
 			</array>
 		</dict>
-		<key>Chapter 3</key>
 		<dict>
 			<key>3.1</key>
 			<array>
@@ -93,7 +90,6 @@
 				<integer>0</integer>
 			</array>
 		</dict>
-		<key>Chapter 4</key>
 		<dict>
 			<key>4.1</key>
 			<array>
@@ -116,7 +112,6 @@
 				<integer>0</integer>
 			</array>
 		</dict>
-		<key>Chapter 5</key>
 		<dict>
 			<key>5.1</key>
 			<array>
@@ -144,7 +139,6 @@
 				<integer>0</integer>
 			</array>
 		</dict>
-		<key>Chapter 6</key>
 		<dict>
 			<key>6.1</key>
 			<array>
@@ -167,7 +161,6 @@
 				<integer>0</integer>
 			</array>
 		</dict>
-		<key>Chapter 7</key>
 		<dict>
 			<key>7.1</key>
 			<array>
@@ -200,7 +193,6 @@
 				<integer>0</integer>
 			</array>
 		</dict>
-		<key>Chapter 8</key>
 		<dict>
 			<key>8.1</key>
 			<array>
@@ -223,6 +215,6 @@
 				<integer>0</integer>
 			</array>
 		</dict>
-	</dict>
+	</array>
 </dict>
 </plist>

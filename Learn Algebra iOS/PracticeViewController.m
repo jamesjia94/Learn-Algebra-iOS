@@ -51,7 +51,7 @@
 - (IBAction)submit:(id)sender;
 
 /**
- Sends the appropriate data/initalizes ivars before segueing.  
+ Sends the appropriate data/initalizes ivars before segueing.
  */
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 
@@ -75,15 +75,6 @@
 @synthesize explanationString=_explanationString;
 @synthesize answerString = _answerString;
 @synthesize lesson=_lesson;
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -155,7 +146,11 @@
         AnsweredQuestionViewController *vc = [segue destinationViewController];
         [vc setExplanationString:_explanationString];
         [vc setAnswerString:_answerString];
-        [vc setLesson:_lesson];
+        NSArray* parsedLesson = [_lesson componentsSeparatedByString:@"."];
+        [vc setChapter:
+         ((NSString *)[parsedLesson objectAtIndex:0]).integerValue];
+        [vc setLesson:
+         ((NSString *)[parsedLesson objectAtIndex:1]).integerValue];
         [vc setTypeString:_typeString];
         [vc setTextFieldString:self.textField.text];
         vc.navigationItem.title = self.navigationItem.title;
@@ -175,7 +170,13 @@
     NSString *prompt = [pickedQuestion objectForKey:@"prompt"];
     NSString *question = [pickedQuestion objectForKey:@"question"];
     self.typeString= [pickedQuestion objectForKey:@"type"];
-    _promptDisplay.text=prompt;
+    NSLog(@"answer: %@", self.answerString);
+    if (prompt == nil){
+        _promptDisplay.text = @"Answer:";
+    }
+    else{
+        _promptDisplay.text=prompt;
+    }
     if ([_typeString isEqualToString:JQMATH]){
         [_webView loadHTMLString:[NSString stringWithFormat:@"%@%@",question,JQMATHHEADER] baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
     }
