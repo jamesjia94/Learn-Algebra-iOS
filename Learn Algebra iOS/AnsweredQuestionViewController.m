@@ -93,7 +93,6 @@
 }
 
 - (void) updateStatistics: (BOOL) isCorrect{
-    //TODO update plist to reflect new stats.
     NSPropertyListFormat format;
     NSString *errorDesc = nil;
     NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];

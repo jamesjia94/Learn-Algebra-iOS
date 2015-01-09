@@ -5,221 +5,279 @@
 	<key>Chapters</key>
 	<array>
 		<dict>
+			<key>name</key>
+			<string>Total</string>
 			<key>0.0</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string> </string>
 			</array>
 		</dict>
 		<dict>
+			<key>name</key>
+			<string>Basics</string>
 			<key>1.1</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Basics of Algebra</string>
 			</array>
 			<key>1.2</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Solving Equation</string>
 			</array>
 			<key>1.3</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Solving Inequalities</string>
 			</array>
 			<key>1.4</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Ratios and Proportions</string>
 			</array>
 			<key>1.5</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Exponents</string>
 			</array>
 			<key>1.6</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Negative Exponents</string>
 			</array>
 			<key>1.7</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Scientific Notation</string>
 			</array>
 		</dict>
 		<dict>
+			<key>name</key>
+			<string>Graphing</string>
 			<key>2.1</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Rectangular Coordinate System</string>
 			</array>
 			<key>2.2</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Graphing by Points</string>
 			</array>
 			<key>2.3</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Graphing by Slope-Intercept Form</string>
 			</array>
 			<key>2.4</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Graphing by Point-Slope Form</string>
 			</array>
 			<key>2.5</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Parallel and Perpendicular Lines</string>
 			</array>
 			<key>2.6</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Introduction to Functions</string>
 			</array>
 		</dict>
 		<dict>
+			<key>name</key>
+			<string>Systems</string>
 			<key>3.1</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Systems of Equations by Substitution</string>
 			</array>
 			<key>3.2</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Systems of Equations by Elimination</string>
 			</array>
 			<key>3.3</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Systems of Equations by Graphing</string>
 			</array>
 		</dict>
 		<dict>
+			<key>name</key>
+			<string>Polynomials</string>
 			<key>4.1</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Introduction to Polynomials</string>
 			</array>
 			<key>4.2</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Adding and Subtracting Polynomials</string>
 			</array>
 			<key>4.3</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Multiplying Polynomials</string>
 			</array>
 			<key>4.4</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Dividing Polynomials</string>
 			</array>
 		</dict>
 		<dict>
+			<key>name</key>
+			<string>Rationals</string>
 			<key>5.1</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Simplifying Rational Expressions</string>
 			</array>
 			<key>5.2</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Multiplying and Dividing Rational Expressions</string>
 			</array>
 			<key>5.3</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Adding and Subtracting Rational Expressions</string>
 			</array>
 			<key>5.4</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Complex Rational Expressions</string>
 			</array>
 			<key>5.5</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Solving Rational Equations</string>
 			</array>
 		</dict>
 		<dict>
+			<key>name</key>
+			<string>Factoring</string>
 			<key>6.1</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Introduction to Factoring</string>
 			</array>
 			<key>6.2</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Factoring Trinomials</string>
 			</array>
 			<key>6.3</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Factoring Binomials</string>
 			</array>
 			<key>6.4</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Solving Equations by Factoring</string>
 			</array>
 		</dict>
 		<dict>
+			<key>name</key>
+			<string></string>
 			<key>7.1</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Introduction To Radicals</string>
 			</array>
 			<key>7.2</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Simplifying Radical Expressions</string>
 			</array>
 			<key>7.3</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Adding and Subtracting Radical Expressions</string>
 			</array>
 			<key>7.4</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Multiplying and Dividing Radical Expressions</string>
 			</array>
 			<key>7.5</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Rational Exponents</string>
 			</array>
 			<key>7.6</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Solving Radical Expressions</string>
 			</array>
 		</dict>
 		<dict>
+			<key>name</key>
+			<string>Quadratics</string>
 			<key>8.1</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Extracting Square Roots</string>
 			</array>
 			<key>8.2</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Completing the Square</string>
 			</array>
 			<key>8.3</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Quadratic Formula</string>
 			</array>
 			<key>8.4</key>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<string>Graphing Parabolas</string>
 			</array>
 		</dict>
 	</array>

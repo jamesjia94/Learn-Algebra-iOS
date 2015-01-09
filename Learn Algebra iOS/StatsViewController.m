@@ -89,7 +89,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     //NSLog(@"Num rows per section %d: %d",section,[[_chapters objectAtIndex:section]count]);
-    return [[_chapters objectAtIndex:section] count];
+    return [[_chapters objectAtIndex:section] count] - 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -112,7 +112,7 @@
     else
     {
         NSArray *chapterStat = [((NSDictionary *)[_chapters objectAtIndex:indexPath.section]) objectForKey:[NSString stringWithFormat:@"%d.%d",indexPath.section,indexPath.row+1]];
-        cell.textLabel.text = [NSString stringWithFormat:@"%d.%d LessonName: ",indexPath.section,indexPath.row+1];
+        cell.textLabel.text = [NSString stringWithFormat:@"%d.%d %@: ",indexPath.section,indexPath.row+1,[chapterStat objectAtIndex:2]];
         if([[chapterStat objectAtIndex:1] integerValue] != 0)
         {
             cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ / %@",[chapterStat objectAtIndex:0],[chapterStat objectAtIndex:1]];
@@ -132,7 +132,7 @@
     }
     else
     {
-        return [NSString stringWithFormat:@"Chapter %d",section];
+        return [NSString stringWithFormat:@"Chapter %d: %@",section, [((NSDictionary *)[_chapters objectAtIndex:section]) objectForKey:[NSString stringWithFormat:@"name"]]];
     }
 }
 
