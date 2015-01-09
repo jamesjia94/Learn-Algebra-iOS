@@ -11,7 +11,7 @@
 /**
  View Controller that handles the display of the user's stats in Practice. TODO: grabbing data from plist to display.
  */
-@interface StatsViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>{
+@interface StatsViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>{
 
 }
 @property NSMutableArray *chapters, *chapter1, *chapter2, *chapter3, *chapter4, *chapter5, *chapter6, *chapter7, *chapter8;

@@ -5,6 +5,13 @@
 	<key>Chapters</key>
 	<array>
 		<dict>
+			<key>0.0</key>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+			</array>
+		</dict>
+		<dict>
 			<key>1.1</key>
 			<array>
 				<integer>0</integer>

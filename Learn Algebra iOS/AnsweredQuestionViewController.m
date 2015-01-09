@@ -111,12 +111,16 @@
         NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
     }
     NSMutableArray *chapters = [plist objectForKey:@"Chapters"];
-    NSDictionary *chapterDict = [chapters objectAtIndex:_chapter -1];
-    NSMutableArray *stats = [chapterDict objectForKey:[NSString stringWithFormat:@"%d.%d",_chapter,_lesson]];
+    NSDictionary *totalDict = [chapters objectAtIndex:0];
+    NSDictionary *chapterDict = [chapters objectAtIndex:_chapter];
+    NSMutableArray *totalStats = [totalDict objectForKey:[NSString stringWithFormat:@"0.0"]];
+    NSMutableArray *chapStats = [chapterDict objectForKey:[NSString stringWithFormat:@"%d.%d",_chapter,_lesson]];
     if (isCorrect){
-        [stats replaceObjectAtIndex:0 withObject:[NSNumber numberWithInt:((NSNumber*)[stats objectAtIndex:0]).intValue+1]];
+        [totalStats replaceObjectAtIndex:0 withObject:[NSNumber numberWithInt:((NSNumber*)[totalStats objectAtIndex:0]).intValue+1]];
+        [chapStats replaceObjectAtIndex:0 withObject:[NSNumber numberWithInt:((NSNumber*)[chapStats objectAtIndex:0]).intValue+1]];
     }
-    [stats replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:((NSNumber*)[stats objectAtIndex:1]).intValue+1]];
+    [totalStats replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:((NSNumber*)[totalStats objectAtIndex:1]).intValue+1]];
+    [chapStats replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:((NSNumber*)[chapStats objectAtIndex:1]).intValue+1]];
     NSString *error;
     NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:plist format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
 

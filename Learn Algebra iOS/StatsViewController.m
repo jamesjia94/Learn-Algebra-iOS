@@ -17,7 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIBarButtonItem *clearButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemTrash target:self action:@selector(clearStats)];
+    UIBarButtonItem *clearButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemTrash target:self action:@selector(confirmClear)];
     self.navigationItem.rightBarButtonItem=clearButton;
     
     NSString *errorDesc = nil;
@@ -38,6 +38,18 @@
     }
     else{
         _chapters = [plist objectForKey:@"Chapters"];
+    }
+}
+
+-(void)confirmClear
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Confirm" message:@"Are you sure you want to reset the statistics?  This action cannot be undone" delegate:self cancelButtonTitle:@"Reset" otherButtonTitles:@"Cancel", nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0){
+        [self clearStats];
     }
 }
 
@@ -81,14 +93,47 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-    NSArray *chapterStat = [((NSDictionary *)[_chapters objectAtIndex:indexPath.section]) objectForKey:[NSString stringWithFormat:@"%d.%d",indexPath.section+1,indexPath.row+1]];
-    cell.textLabel.text = [NSString stringWithFormat:@"Lesson %d: %@ correct out of %@",indexPath.row+1,[chapterStat objectAtIndex:0],[chapterStat objectAtIndex:1]];
+    UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+    
+    if (indexPath.section == 0)
+    {
+        NSArray *totalStat = [((NSDictionary *)[_chapters objectAtIndex:indexPath.section]) objectForKey:[NSString stringWithFormat:@"0.0"]];
+        if([[totalStat objectAtIndex:1] integerValue] != 0)
+        {
+            cell.textLabel.text = [NSString stringWithFormat:@"%d%%", [[totalStat objectAtIndex:0] integerValue]*100/[[totalStat objectAtIndex:1] integerValue]];
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ / %@",[totalStat objectAtIndex:0],[totalStat objectAtIndex:1]];
+        }
+        else
+        {
+            cell.textLabel.text = [NSString stringWithFormat:@"No Data"];
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"--"];
+        }
+    }
+    else
+    {
+        NSArray *chapterStat = [((NSDictionary *)[_chapters objectAtIndex:indexPath.section]) objectForKey:[NSString stringWithFormat:@"%d.%d",indexPath.section,indexPath.row+1]];
+        cell.textLabel.text = [NSString stringWithFormat:@"%d.%d LessonName: ",indexPath.section,indexPath.row+1];
+        if([[chapterStat objectAtIndex:1] integerValue] != 0)
+        {
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ / %@",[chapterStat objectAtIndex:0],[chapterStat objectAtIndex:1]];
+        }
+        else
+        {
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"--"];
+        }
+    }
     return cell;
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    return [NSString stringWithFormat:@"Chapter %d",section+1];
+    if (section == 0)
+    {
+        return [NSString stringWithFormat:@"Total"];
+    }
+    else
+    {
+        return [NSString stringWithFormat:@"Chapter %d",section];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
