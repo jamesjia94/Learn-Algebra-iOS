@@ -1,0 +1,38 @@
+<head>
+<script type='text/x-mathjax-config'>MathJax.Hub.Config({ messageStyle: "simple", showMathMenu: false, jax: ['input/TeX','output/HTML-CSS'], extensions: ['tex2jax.js'], TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'] } });</script>
+<script type='text/javascript' src='../MathJax/MathJax.js'></script>
+</head>
+
+
+
+<p><b><big><big><big>Terms</big></big></big></b></p>
+
+<p><b><big>Lesson Number (Ex: 2.1)</big></b></p>
+// This should be a blank space
+<p><b>Term, this should be capitalized. If this is multiple terms, every word should be capitalized UNLESS it is a preposition</b>: definition starting lowercase; NOT uppercase
+
+<p><b>Term, this should be capitalized. If this is multiple terms, every word should be capitalized UNLESS it is a preposition</b>: definition starting lowercase; NOT uppercase
+//Be sure to note the space here
+<p><b><big>Lesson Number</big></b></p>
+
+<p><b><big><big><big>Formulas</big></big></big></b></p>
+//Space goes here; formulas optional IFF there are no formulas
+<p><b><big>Lesson Number</big></b></p>
+
+<p><b>Name of formula</b>: \(formula should use in-line LaTeX\) </p>
+
+<p><b><big><big><big>Sample Solutions</big></big></big></b></p>
+
+<p><b><big>Same drill with the lessons</big></b></p>
+
+<p><b>Name of problem type; be sure to include a colon at the end:</b></p>
+
+<p>Problem text; any problems use in-line LaTeX citation \(6x^5\)</p>
+
+<p><i>Explanation using italics</i>: \(step\)</p>
+//Be sure that there's a space here
+<p><i>Explanation using italics</i>: \(step\)</p>
+
+<p><i>Explanation using italics</i>: \(step\)</p>
+
+<p>Answer: \(answer goes in here\)</p>
