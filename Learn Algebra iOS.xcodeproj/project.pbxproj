@@ -25,7 +25,6 @@
 		4EB8B5E316B33D8E0066A596 /* CustomKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8B5E216B33D8E0066A596 /* CustomKeyboard.m */; };
 		4EB8B5E616B341010066A596 /* CustomKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB8B5E516B341010066A596 /* CustomKeyboard.xib */; };
 		4EB8B5EF16B3CFBD0066A596 /* Quicknotes in Resources */ = {isa = PBXBuildFile; fileRef = 4EB8B5EE16B3CFBD0066A596 /* Quicknotes */; };
-		4EF6AB2B169BAB00001D7246 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF6AB2A169BAB00001D7246 /* UIKit.framework */; };
 		4EF6AB2D169BAB00001D7246 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF6AB2C169BAB00001D7246 /* Foundation.framework */; };
 		4EF6AB2F169BAB00001D7246 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF6AB2E169BAB00001D7246 /* CoreGraphics.framework */; };
 		4EF6AB35169BAB00001D7246 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EF6AB33169BAB00001D7246 /* InfoPlist.strings */; };
@@ -41,6 +40,7 @@
 		4EF6AB51169BAB00001D7246 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF6AB2C169BAB00001D7246 /* Foundation.framework */; };
 		4EF6AB59169BAB00001D7246 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EF6AB57169BAB00001D7246 /* InfoPlist.strings */; };
 		4EF6AB5C169BAB00001D7246 /* Learn_Algebra_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6AB5B169BAB00001D7246 /* Learn_Algebra_iOSTests.m */; };
+		626AC6D81A60AB4D006E42A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF6AB2A169BAB00001D7246 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +50,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4EF6AB25169BAB00001D7246;
 			remoteInfo = "Learn Algebra iOS";
+		};
+		626AC6891A60A27B006E42A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 626E4FF81A6094EA008182D5 /* JreEmulation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 06619384155848D70004DAFE;
+			remoteInfo = jre_emul;
+		};
+		626E50011A6094EA008182D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 626E4FF81A6094EA008182D5 /* JreEmulation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06619385155848D70004DAFE;
+			remoteInfo = jre_emul;
+		};
+		626E50031A6094EA008182D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 626E4FF81A6094EA008182D5 /* JreEmulation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06C73D271917FDE5001D3CC8;
+			remoteInfo = jre_emul_tests;
+		};
+		626E50051A6094EA008182D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 626E4FF81A6094EA008182D5 /* JreEmulation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06ED87B819759EFF00633227;
+			remoteInfo = "JRE JUnit Tests";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -106,6 +134,8 @@
 		4EF6AB58169BAB00001D7246 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4EF6AB5A169BAB00001D7246 /* Learn_Algebra_iOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Learn_Algebra_iOSTests.h; sourceTree = "<group>"; };
 		4EF6AB5B169BAB00001D7246 /* Learn_Algebra_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Learn_Algebra_iOSTests.m; sourceTree = "<group>"; };
+		626AC6951A60A676006E42A1 /* libjre_emul.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjre_emul.a; path = "../j2objc-master/dist/lib/libjre_emul.a"; sourceTree = "<group>"; };
+		626E4FF81A6094EA008182D5 /* JreEmulation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JreEmulation.xcodeproj; path = "../j2objc-master/jre_emul/JreEmulation.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EF6AB2B169BAB00001D7246 /* UIKit.framework in Frameworks */,
+				626AC6D81A60AB4D006E42A1 /* UIKit.framework in Frameworks */,
 				4EF6AB2D169BAB00001D7246 /* Foundation.framework in Frameworks */,
 				4EF6AB2F169BAB00001D7246 /* CoreGraphics.framework in Frameworks */,
 			);
@@ -158,6 +188,7 @@
 		4EF6AB1B169BAB00001D7246 = {
 			isa = PBXGroup;
 			children = (
+				626E4FF81A6094EA008182D5 /* JreEmulation.xcodeproj */,
 				1A48A7DD174EEFF700BC3AF6 /* Keyboard */,
 				4EF6AB30169BAB00001D7246 /* Learn Algebra iOS */,
 				4EF6AB54169BAB00001D7246 /* Learn Algebra iOSTests */,
@@ -178,6 +209,7 @@
 		4EF6AB29169BAB00001D7246 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				626AC6951A60A676006E42A1 /* libjre_emul.a */,
 				4EF6AB2A169BAB00001D7246 /* UIKit.framework */,
 				4EF6AB2C169BAB00001D7246 /* Foundation.framework */,
 				4EF6AB2E169BAB00001D7246 /* CoreGraphics.framework */,
@@ -254,6 +286,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		626E4FF91A6094EA008182D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				626E50021A6094EA008182D5 /* libjre_emul.a */,
+				626E50041A6094EA008182D5 /* jre_emul_tests.xctest */,
+				626E50061A6094EA008182D5 /* JRE JUnit Tests.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -268,6 +310,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				626AC68A1A60A27B006E42A1 /* PBXTargetDependency */,
 			);
 			name = "Learn Algebra iOS";
 			productName = "Learn Algebra iOS";
@@ -291,7 +334,7 @@
 			name = "Learn Algebra iOSTests";
 			productName = "Learn Algebra iOSTests";
 			productReference = 4EF6AB4D169BAB00001D7246 /* Learn Algebra iOSTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -299,6 +342,7 @@
 		4EF6AB1D169BAB00001D7246 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0610;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = ExEquals;
 			};
@@ -312,6 +356,12 @@
 			mainGroup = 4EF6AB1B169BAB00001D7246;
 			productRefGroup = 4EF6AB27169BAB00001D7246 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 626E4FF91A6094EA008182D5 /* Products */;
+					ProjectRef = 626E4FF81A6094EA008182D5 /* JreEmulation.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4EF6AB25169BAB00001D7246 /* Learn Algebra iOS */,
@@ -319,6 +369,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		626E50021A6094EA008182D5 /* libjre_emul.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjre_emul.a;
+			remoteRef = 626E50011A6094EA008182D5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		626E50041A6094EA008182D5 /* jre_emul_tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = jre_emul_tests.xctest;
+			remoteRef = 626E50031A6094EA008182D5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		626E50061A6094EA008182D5 /* JRE JUnit Tests.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "JRE JUnit Tests.app";
+			remoteRef = 626E50051A6094EA008182D5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4EF6AB24169BAB00001D7246 /* Resources */ = {
@@ -404,6 +478,11 @@
 			target = 4EF6AB25169BAB00001D7246 /* Learn Algebra iOS */;
 			targetProxy = 4EF6AB52169BAB00001D7246 /* PBXContainerItemProxy */;
 		};
+		626AC68A1A60A27B006E42A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = jre_emul;
+			targetProxy = 626AC6891A60A27B006E42A1 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -456,6 +535,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Documents/exequals/j2objc-master/dist/include",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -477,6 +561,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Documents/exequals/j2objc-master/dist/include",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
@@ -489,7 +578,13 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Learn Algebra iOS/Learn Algebra iOS-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Documents/exequals/j2objc-master/dist/include",
+				);
 				INFOPLIST_FILE = "Learn Algebra iOS/Learn Algebra iOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -502,7 +597,13 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Learn Algebra iOS/Learn Algebra iOS-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Documents/exequals/j2objc-master/dist/include",
+				);
 				INFOPLIST_FILE = "Learn Algebra iOS/Learn Algebra iOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
