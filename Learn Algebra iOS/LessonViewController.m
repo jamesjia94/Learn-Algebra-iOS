@@ -86,6 +86,9 @@
         if(nextNum > [_dataModel[chap - 1] count]) {
             nextNum = 1;
             chap = chap + 1;
+            if(chap > [_dataModel count]){
+                chap = 1;
+            }
         }
         
         viewController.navigationItem.title = [NSString stringWithFormat:@"%@", _dataModel[chap - 1][nextNum - 1]];
