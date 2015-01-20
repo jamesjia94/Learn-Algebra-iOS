@@ -65,7 +65,6 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue  sender:(id)sender{
-    NSLog(self.title);
     if ([((UIBarButtonItem*)sender).title isEqualToString:@"Practice"]){
         PracticeViewController *viewController = segue.destinationViewController;
         NSString *lessonName = [NSString stringWithFormat:@"%@", _lesson];
@@ -74,11 +73,25 @@
         NSString *lessonNum = [NSString stringWithFormat:@"%@", les[1]];
         viewController.navigationItem.title = [NSString stringWithFormat:@"%@", _dataModel[lessonChap.intValue - 1][lessonNum.intValue - 1]];
         [viewController setLesson: [NSString stringWithFormat:@"%.01f", lessonName.floatValue]];
-        [self viewWillDisappear:true];
     }
     else if ([((UIBarButtonItem*)sender).title isEqualToString:@"Next Lesson"]){
         LessonViewController *viewController = segue.destinationViewController;
+        NSString *lessonName = [NSString stringWithFormat:@"%@", _lesson];
+        NSArray *les = [lessonName componentsSeparatedByString: @"."];
+        NSString *lessonChap = [NSString stringWithFormat:@"%@", les[0]];
+        NSString *lessonNum = [NSString stringWithFormat:@"%@", les[1]];
+        
+        int chap = lessonChap.intValue;
+        int nextNum = lessonNum.intValue + 1;
+        if(nextNum > [_dataModel[chap - 1] count]) {
+            nextNum = 1;
+            chap = chap + 1;
+        }
+        
+        viewController.navigationItem.title = [NSString stringWithFormat:@"%@", _dataModel[chap - 1][nextNum - 1]];
+        [viewController setLesson: [NSString stringWithFormat:@"%d.%d", chap, nextNum]];
     }
+    [self viewWillDisappear:true];
 }
 
 @end
