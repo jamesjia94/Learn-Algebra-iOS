@@ -51,13 +51,6 @@
 			remoteGlobalIDString = 4EF6AB25169BAB00001D7246;
 			remoteInfo = "Learn Algebra iOS";
 		};
-		626AC6891A60A27B006E42A1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 626E4FF81A6094EA008182D5 /* JreEmulation.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 06619384155848D70004DAFE;
-			remoteInfo = jre_emul;
-		};
 		626E50011A6094EA008182D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 626E4FF81A6094EA008182D5 /* JreEmulation.xcodeproj */;
@@ -310,7 +303,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				626AC68A1A60A27B006E42A1 /* PBXTargetDependency */,
 			);
 			name = "Learn Algebra iOS";
 			productName = "Learn Algebra iOS";
@@ -477,11 +469,6 @@
 			isa = PBXTargetDependency;
 			target = 4EF6AB25169BAB00001D7246 /* Learn Algebra iOS */;
 			targetProxy = 4EF6AB52169BAB00001D7246 /* PBXContainerItemProxy */;
-		};
-		626AC68A1A60A27B006E42A1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = jre_emul;
-			targetProxy = 626AC6891A60A27B006E42A1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PracticeViewController.h"
 
 /**
  View Controller that handles displaying UITableView that contains all the lessons as well as a UIWebView that displays the contents of that lesson.
@@ -15,7 +16,9 @@
 {
     NSString *lesson;
     UIWebView *webView;
+    NSMutableArray *dataModel;
 }
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (nonatomic) NSString *lesson;
+@property (strong) NSMutableArray *dataModel;
 @end
