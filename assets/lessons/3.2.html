@@ -1,0 +1,49 @@
+<meta charset="utf-8">
+<script type='text/x-mathjax-config'>MathJax.Hub.Config({ messageStyle: "simple", showMathMenu: false, jax: ['input/TeX','output/HTML-CSS'], extensions: ['tex2jax.js'], TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'] } });</script>
+<script type='text/javascript' src='../MathJax/MathJax.js'></script>
+
+<p>	While substitution is one way to solve systems of equations, the elimination method is good for situations where both equations share at least one variable term. This means that either the x or y variable (or both) in both equations will share the same coefficient. While this is not necessary for using the elimination method, it is useful for certain problems. Here’s an example:<br />
+\[2x+y=10<br />
+\\2x-3y=2\]<br />
+	While we could use the substitution method from the previous lesson to solve for y in the first equation, we will instead use the elimination method. Since both equations have 2x, we will subtract the two equations from each other to eliminate the x term from both equations. This is easier to view visually if both equations are lined up vertically, as below:<br />
+\[2x+y=10<br />
+\\2x-3y=2\]<br />
+	We will subtract the top and the bottom equations, resulting in the following:<br />
+\[(2x-2x)+(y--3y)=(10-2)\]<br />
+	Which simplifies to: \(4y=8\), so \(y = 2\). From here, we can plug y back into either equation, and find that \(x = 4\).<br />
+	While we subtracted the two equations for the last problem, you could also use addition. This is recommended if the two terms have opposite signs; i.e, if one is negative and one is positive. For example:<br />
+\[2x+y=9<br />
+\\4x-y=9\]<br />
+	In this example, we will add the two equations together to remove the y terms from the equations, forming:<br />
+\[(2x+4x)+(y-y)=(9+9)\]<br />
+	This simplifies to \(6x = 18\), which can be solved to reveal that \(x = 3\). Plugging this back into the original equation reveals that y is also equal to 3.<br />
+	
+
+
+<p><b><font size= "4"> When the Coefficients Don't Match</font></b></p>
+
+
+Note that both of the examples so far have involved terms that had the same coefficients. However, sometimes the two equations will not share any terms. For example:<br />
+\[2x+3y=19<br />
+\\4x-2y=-2\]<br />
+	While there are no terms that share coefficients in these two equations, we can multiply or divide the first equation by a constant to make them match. If we want to eliminate x from both equations, we would multiply the first equation by 2 or divide the second equation by 2 to make the x terms in both equations share the same coefficient. For this example, we will divide the second equation by 2. This will change the system to the following:<br />
+\[2x+3y=19<br />
+\\2x-y=-1\]<br />
+	From here, we can use the elimination method and subtract 2x from both equations. This will result in:<br />
+\[(2x-2x)+(3y--y)=(19--1)\]<br />
+	Which becomes \(4y=20\), from which we can solve to reveal that \(y = 5\). Plugging this back into the original equation reveals that \(x = 2\). However, if you cannot easily get terms to match in each equation, you use the substitution method instead.<br />
+	
+
+<p><b><font size= "4"> Special Cases</font></b></p>
+
+Sometimes, using the elimination method will get rid of both variables, leaving only numbers behind. For example:<br />
+\[x+y=5<br />
+\\2x+2y=10\]<br />
+	We begin by multiplying the first equation by 2, resulting in:<br />
+\[2x+2y=10<br />
+\\2x+2y=10 \]<br />
+	Now, subtracting the equations will give us 0 = 0, which is true for all values of x and y. This means that these two equations are the same line. If you tried to graph this, one line will be on top of the other, so there is only one line in the end. Using substitution will result in a similar answer, 10 = 10. Because both equations are the same, the best you can do is to solve one variable in terms of the other, and leave that as your answer. </p>
+<p>You may also encounter a system which yields a false statement. For example:<br />
+\[x+y=5<br />
+\\2x+2y=0\]<br />
+	Multiplying the first equation by 2 and then subtracting will result in 10 = 0, which is false. Graphically, this will show two parallel lines separated from each other, and should never intersect.</p>

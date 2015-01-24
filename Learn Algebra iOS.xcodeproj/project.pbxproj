@@ -8,23 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		1A5BE531170529990045E2F9 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A5BE530170529990045E2F9 /* Data.plist */; };
-		1A9AF6AC16EFD65B002D1D03 /* jqMath in Resources */ = {isa = PBXBuildFile; fileRef = 1A9AF6AB16EFD65B002D1D03 /* jqMath */; };
 		1AACE146170E7676008005A0 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AACE145170E7676008005A0 /* StatsViewController.m */; };
 		4E117EF616C7127E0023FEE6 /* AnsweredQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E117EF516C7127E0023FEE6 /* AnsweredQuestionViewController.m */; };
-		4E117EF816C8DDC20023FEE6 /* Practice in Resources */ = {isa = PBXBuildFile; fileRef = 4E117EF716C8DDC20023FEE6 /* Practice */; };
 		4E1A624216A1052100440103 /* ChaptersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A624116A1052100440103 /* ChaptersViewController.m */; };
 		4E1A624A16A2274200440103 /* AboutPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A624916A2274200440103 /* AboutPageViewController.m */; };
 		4E281A7716A52DB800FEA85F /* ExpandableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E281A7216A52DB800FEA85F /* ExpandableTableView.m */; };
 		4E281A7816A52DB800FEA85F /* ExpandableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E281A7416A52DB800FEA85F /* ExpandableTableViewController.m */; };
 		4E281A7F16A6192000FEA85F /* LessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E281A7E16A6192000FEA85F /* LessonViewController.m */; };
 		4E8CFB7F16B7518700648642 /* iOS_Keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E8CFB7E16B7518700648642 /* iOS_Keyboard.png */; };
-		4E9EF55A16AE3801000433CA /* MathJaxHTML in Resources */ = {isa = PBXBuildFile; fileRef = 4E9EF55916AE3801000433CA /* MathJaxHTML */; };
-		4E9EF55C16AE3A02000433CA /* MathJax in Resources */ = {isa = PBXBuildFile; fileRef = 4E9EF55B16AE3A02000433CA /* MathJax */; };
 		4EB4076A16B3F95B00B5A0BA /* QuickNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4076916B3F95B00B5A0BA /* QuickNotesViewController.m */; };
 		4EB4076D16B3FF3100B5A0BA /* PracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4076C16B3FF3100B5A0BA /* PracticeViewController.m */; };
 		4EB8B5E316B33D8E0066A596 /* CustomKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8B5E216B33D8E0066A596 /* CustomKeyboard.m */; };
 		4EB8B5E616B341010066A596 /* CustomKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB8B5E516B341010066A596 /* CustomKeyboard.xib */; };
-		4EB8B5EF16B3CFBD0066A596 /* Quicknotes in Resources */ = {isa = PBXBuildFile; fileRef = 4EB8B5EE16B3CFBD0066A596 /* Quicknotes */; };
 		4EF6AB2D169BAB00001D7246 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF6AB2C169BAB00001D7246 /* Foundation.framework */; };
 		4EF6AB2F169BAB00001D7246 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF6AB2E169BAB00001D7246 /* CoreGraphics.framework */; };
 		4EF6AB35169BAB00001D7246 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EF6AB33169BAB00001D7246 /* InfoPlist.strings */; };
@@ -41,6 +36,11 @@
 		4EF6AB59169BAB00001D7246 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EF6AB57169BAB00001D7246 /* InfoPlist.strings */; };
 		4EF6AB5C169BAB00001D7246 /* Learn_Algebra_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6AB5B169BAB00001D7246 /* Learn_Algebra_iOSTests.m */; };
 		626AC6D81A60AB4D006E42A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF6AB2A169BAB00001D7246 /* UIKit.framework */; };
+		C4D66A851A732FA1004BB315 /* jqMath in Resources */ = {isa = PBXBuildFile; fileRef = C4D66A801A732FA1004BB315 /* jqMath */; };
+		C4D66A861A732FA1004BB315 /* lessons in Resources */ = {isa = PBXBuildFile; fileRef = C4D66A811A732FA1004BB315 /* lessons */; };
+		C4D66A871A732FA1004BB315 /* MathJax in Resources */ = {isa = PBXBuildFile; fileRef = C4D66A821A732FA1004BB315 /* MathJax */; };
+		C4D66A881A732FA1004BB315 /* problems in Resources */ = {isa = PBXBuildFile; fileRef = C4D66A831A732FA1004BB315 /* problems */; };
+		C4D66A891A732FA1004BB315 /* quicknotes in Resources */ = {isa = PBXBuildFile; fileRef = C4D66A841A732FA1004BB315 /* quicknotes */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,12 +55,10 @@
 
 /* Begin PBXFileReference section */
 		1A5BE530170529990045E2F9 /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
-		1A9AF6AB16EFD65B002D1D03 /* jqMath */ = {isa = PBXFileReference; lastKnownFileType = folder; path = jqMath; sourceTree = "<group>"; };
 		1AACE144170E7676008005A0 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
 		1AACE145170E7676008005A0 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		4E117EF416C7127E0023FEE6 /* AnsweredQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnsweredQuestionViewController.h; sourceTree = "<group>"; };
 		4E117EF516C7127E0023FEE6 /* AnsweredQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnsweredQuestionViewController.m; sourceTree = "<group>"; };
-		4E117EF716C8DDC20023FEE6 /* Practice */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Practice; sourceTree = SOURCE_ROOT; };
 		4E1A624016A1052100440103 /* ChaptersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaptersViewController.h; sourceTree = "<group>"; };
 		4E1A624116A1052100440103 /* ChaptersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaptersViewController.m; sourceTree = "<group>"; };
 		4E1A624816A2274200440103 /* AboutPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutPageViewController.h; sourceTree = "<group>"; };
@@ -74,8 +72,6 @@
 		4E281A7D16A6192000FEA85F /* LessonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonViewController.h; sourceTree = "<group>"; };
 		4E281A7E16A6192000FEA85F /* LessonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonViewController.m; sourceTree = "<group>"; };
 		4E8CFB7E16B7518700648642 /* iOS_Keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iOS_Keyboard.png; sourceTree = "<group>"; };
-		4E9EF55916AE3801000433CA /* MathJaxHTML */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MathJaxHTML; sourceTree = "<group>"; };
-		4E9EF55B16AE3A02000433CA /* MathJax */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MathJax; sourceTree = "<group>"; };
 		4EB4076816B3F95B00B5A0BA /* QuickNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickNotesViewController.h; sourceTree = "<group>"; };
 		4EB4076916B3F95B00B5A0BA /* QuickNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickNotesViewController.m; sourceTree = "<group>"; };
 		4EB4076B16B3FF3100B5A0BA /* PracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeViewController.h; sourceTree = "<group>"; };
@@ -83,7 +79,6 @@
 		4EB8B5E116B33D8E0066A596 /* CustomKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomKeyboard.h; path = "Learn Algebra iOS/CustomKeyboard.h"; sourceTree = "<group>"; };
 		4EB8B5E216B33D8E0066A596 /* CustomKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomKeyboard.m; path = "Learn Algebra iOS/CustomKeyboard.m"; sourceTree = "<group>"; };
 		4EB8B5E516B341010066A596 /* CustomKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomKeyboard.xib; path = "Learn Algebra iOS/CustomKeyboard.xib"; sourceTree = "<group>"; };
-		4EB8B5EE16B3CFBD0066A596 /* Quicknotes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Quicknotes; sourceTree = SOURCE_ROOT; };
 		4EF6AB26169BAB00001D7246 /* Learn Algebra iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn Algebra iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF6AB2A169BAB00001D7246 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4EF6AB2C169BAB00001D7246 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,6 +102,11 @@
 		4EF6AB5A169BAB00001D7246 /* Learn_Algebra_iOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Learn_Algebra_iOSTests.h; sourceTree = "<group>"; };
 		4EF6AB5B169BAB00001D7246 /* Learn_Algebra_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Learn_Algebra_iOSTests.m; sourceTree = "<group>"; };
 		626AC6951A60A676006E42A1 /* libjre_emul.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjre_emul.a; path = "../j2objc-master/dist/lib/libjre_emul.a"; sourceTree = "<group>"; };
+		C4D66A801A732FA1004BB315 /* jqMath */ = {isa = PBXFileReference; lastKnownFileType = folder; name = jqMath; path = assets/jqMath; sourceTree = SOURCE_ROOT; };
+		C4D66A811A732FA1004BB315 /* lessons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lessons; path = assets/lessons; sourceTree = SOURCE_ROOT; };
+		C4D66A821A732FA1004BB315 /* MathJax */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MathJax; path = assets/MathJax; sourceTree = SOURCE_ROOT; };
+		C4D66A831A732FA1004BB315 /* problems */ = {isa = PBXFileReference; lastKnownFileType = folder; name = problems; path = assets/problems; sourceTree = SOURCE_ROOT; };
+		C4D66A841A732FA1004BB315 /* quicknotes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = quicknotes; path = assets/quicknotes; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,11 +211,11 @@
 				4EB4076916B3F95B00B5A0BA /* QuickNotesViewController.m */,
 				1AACE144170E7676008005A0 /* StatsViewController.h */,
 				1AACE145170E7676008005A0 /* StatsViewController.m */,
-				1A9AF6AB16EFD65B002D1D03 /* jqMath */,
-				4E117EF716C8DDC20023FEE6 /* Practice */,
-				4EB8B5EE16B3CFBD0066A596 /* Quicknotes */,
-				4E9EF55B16AE3A02000433CA /* MathJax */,
-				4E9EF55916AE3801000433CA /* MathJaxHTML */,
+				C4D66A801A732FA1004BB315 /* jqMath */,
+				C4D66A811A732FA1004BB315 /* lessons */,
+				C4D66A821A732FA1004BB315 /* MathJax */,
+				C4D66A831A732FA1004BB315 /* problems */,
+				C4D66A841A732FA1004BB315 /* quicknotes */,
 				4E1A624716A20E6000440103 /* ExpandableTableView */,
 				4EF6AB31169BAB00001D7246 /* Supporting Files */,
 			);
@@ -328,18 +328,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D66A871A732FA1004BB315 /* MathJax in Resources */,
 				4EF6AB35169BAB00001D7246 /* InfoPlist.strings in Resources */,
 				4EF6AB3D169BAB00001D7246 /* Default.png in Resources */,
 				4EF6AB3F169BAB00001D7246 /* Default@2x.png in Resources */,
+				C4D66A881A732FA1004BB315 /* problems in Resources */,
 				4EF6AB41169BAB00001D7246 /* Default-568h@2x.png in Resources */,
+				C4D66A851A732FA1004BB315 /* jqMath in Resources */,
 				4EF6AB44169BAB00001D7246 /* MainStoryboard.storyboard in Resources */,
-				4E9EF55A16AE3801000433CA /* MathJaxHTML in Resources */,
-				4E9EF55C16AE3A02000433CA /* MathJax in Resources */,
 				4EB8B5E616B341010066A596 /* CustomKeyboard.xib in Resources */,
-				4EB8B5EF16B3CFBD0066A596 /* Quicknotes in Resources */,
+				C4D66A861A732FA1004BB315 /* lessons in Resources */,
 				4E8CFB7F16B7518700648642 /* iOS_Keyboard.png in Resources */,
-				4E117EF816C8DDC20023FEE6 /* Practice in Resources */,
-				1A9AF6AC16EFD65B002D1D03 /* jqMath in Resources */,
+				C4D66A891A732FA1004BB315 /* quicknotes in Resources */,
 				1A5BE531170529990045E2F9 /* Data.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

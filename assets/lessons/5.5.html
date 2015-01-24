@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<script type='text/x-mathjax-config'>MathJax.Hub.Config({ messageStyle: "simple", showMathMenu: false, jax: ['input/TeX','output/HTML-CSS'], extensions: ['tex2jax.js'], TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'] } });</script>
+<script type='text/javascript' src='../MathJax/MathJax.js'></script>
+
+<p><strong><font size= "4">Solving Rational Equations</font></strong></p>
+
+You have already learned how to solve regular equations. Solving rational equations is almost the same thing; there are just a few extra steps you must do. Try solving this rational equation:<br />
+\[\frac{1}{x-4}+\frac{2x}{5}=\frac{4x-5}{x}\]
+To begin solving this series of fractions, you begin by making the denominator the same for all the fractions. Once they are all the same, you can easily add the numerators. Since none of the fractions share a similar denominator, you are going to have to multiply them with additional fractions to get the results that you want. But wait! We know that we can't just multiply things any way we want, because then the new equation won't equal the original equation.
+To solve this, remember the multiplicative identity! Anything multiplied by 1 will equal itself. So if we were to multiply each fraction by 1 as in the following expression, our new equation will still equal our original equation.
+\[\frac{1}{x-4}*1+\frac{2x}{5}*1=\frac{4x-5}{x}*1\]
+Now, remember that any fraction that has the same numerator and denominator will equal 1. So the fraction \(\frac{5x}{5x}\) will equal 1 (as long as x does not equal 0, but we will get to that later). So if we were to replace all of the 1s with the fractions needed to create the same denominator, then the numerators and the denominators of these fractions would have to be equal.
+You're probably wondering how we determine which fraction to multiply with. Don't worry; this part isn't that difficult. First, we'll begin by determining which denominator we need. We can do this by multiplying all of the denominators together (since there are no common factors), which becomes \((x-4)*5*x=5x(x-4)\). We can simplify this further which you should probably do for your homework and test questions, but it'll be easier to understand this way.
+We'll begin by looking at the first fraction, \(\frac{1}{x-4}\). We need to make the current denominator, or \((x-4)\) into \(5x(x-4)\). But wait! Isn't this just the original one multiplied by \(5x\)? Of course it is! So, to make this equal 1, we would multiply the fraction by \(\frac{5x}{5x}\). This gives us:
+\[\frac{1}{x-4}*\frac{5x}{5x}+\frac{2x}{5}*1=\frac{4x-5}{x}*1\]
+Now, we do the same for the second fraction. This time, the denominator is 5, and we need to make it \(5x(x-4)\), which means we need to multiply it by \(x(x-4)\). So, we multiply this second fraction by the fraction \(\frac{x(x-4)}{x(x-4)}\). This gives us:
+\[\frac{1}{x-4}*\frac{5x}{5x}+\frac{2x}{5}*\frac{x(x-4)}{x(x-4)}=\frac{4x-5}{x}*1\]
+Finally, we do the same thing once more for the last fraction. Since the denominator is x and it needs to be transformed into \(5x(x-4)\), we multiply it by the fraction \(\frac{5(x-4)}{5(x-4)}\). This gives us:
+\[\frac{1}{x-4}*\frac{5x}{5x}+\frac{2x}{5}*\frac{x(x-4)}{x(x-4)}=\frac{4x-5}{x}*\frac{5(x-4)}{5(x-4)}\]
+Now all you have to do is simplify this monstrosity! The simplification of this equation is as follows:
+\[\frac{5x}{5x(x-4)} + \frac{2x^2(x-4)}{5x(x-4)}=\frac{5(x-4)(4x-5)}{5x(x-4)}\]
+\[\frac{5x+2x^2(x-4)}{5x(x-4)}=\frac{5(x-4)(4x-5)}{5x(x-4)}\]
+Since the fractions are the same and the denominators are the same, then the numerators must equal one another. This gives us the following equation:
+\[5x+2x^2(x-4)=5(x-4)(4x-5)\]
+\[5x+2x^2(x-4)-5(x-4)(4x-5)=0\]
+Don't worry; most problems will be easier to solve than this one. To solve this, you would FOIL out all of the terms, creating the polynomial:
+\[2x^3-28x^2+110x-100=0\]
+Factoring this would yield:
+\[2(x-5)(x^2-9x+10)=0\]
+This means that either \(x-5\) or \(x^2-9x+10\) equal 0. Your solutions are:
+\[x=5,\frac{1}{2}(9-\sqrt{41}), \frac{1}{2}(9+\sqrt{41})\]
+Do note that most of the problems you will be faced with will most likely not be larger than a trinomial, so you will not be forced to factor something of this degree.	
+
+Be careful: not all equations will be solvable. For instance, look at the following equation. 
+\[\frac{2x+5}{x}+1=\frac{5}{x}\]<br />
+If you try to solve this problem by first multiplying everything by x, you will find that x equals 0. But, looking at the original equation, if we tried to plug in 0, there will be two undefined terms, which means that 0 cannot be the answer. This is called an extraneous solution, one which we solve for but does not actually work for the equation. Looking carefully, these are very similar to restrictions we learned for expressions. You can easily find the restrictions by looking at the denominators and see what values will make any of them zero, just like with expressions. Just to be sure, always make sure to check your answer in the original equation. </p>

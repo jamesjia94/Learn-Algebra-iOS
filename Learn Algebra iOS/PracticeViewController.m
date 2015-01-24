@@ -159,7 +159,7 @@
 
 -(void) displayProblem{
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                         pathForResource:self.lesson ofType:@"json" inDirectory:@"Practice"]];
+                                         pathForResource:self.lesson ofType:@"json" inDirectory:@"problems"]];
     NSData *data = [NSData dataWithContentsOfURL:url];
     NSError *error;
     NSDictionary *json =[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
