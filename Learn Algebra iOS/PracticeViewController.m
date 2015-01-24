@@ -170,7 +170,7 @@
     NSString *prompt = [pickedQuestion objectForKey:@"prompt"];
     NSString *question = [pickedQuestion objectForKey:@"question"];
     self.typeString= [pickedQuestion objectForKey:@"type"];
-    NSLog(@"answer: %@", self.answerString);
+
     if (prompt == nil){
         _promptDisplay.text = @"Answer:";
     }
