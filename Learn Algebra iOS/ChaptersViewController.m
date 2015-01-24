@@ -148,7 +148,7 @@
         cell.userInteractionEnabled=NO;
     }
     else{
-        cell.textLabel.text = [NSString stringWithFormat: @"Chapter %d", section+1];
+        cell.textLabel.text = [NSString stringWithFormat: @"Chapter %lu", section+1];
     }
 	
 	cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ExpandableAccessoryView"] highlightedImage:[UIImage imageNamed:@"ExpandableAccessoryView"]];

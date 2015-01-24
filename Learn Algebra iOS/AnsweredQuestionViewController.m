@@ -108,7 +108,7 @@
                                            format:&format
                                            errorDescription:&errorDesc];
     if (!plist) {
-        NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
+        NSLog(@"Error reading plist: %@, format: %lu", errorDesc, format);
     }
     NSMutableArray *chapters = [plist objectForKey:@"Chapters"];
     NSDictionary *totalDict = [chapters objectAtIndex:0];

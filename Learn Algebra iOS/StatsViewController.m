@@ -34,7 +34,7 @@
                                            format:&format
                                            errorDescription:&errorDesc];
     if (!plist) {
-        NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
+        NSLog(@"Error reading plist: %@, format: %lu", errorDesc, format);
     }
     else{
         _chapters = [plist objectForKey:@"Chapters"];
@@ -100,7 +100,7 @@
         NSArray *totalStat = [((NSDictionary *)[_chapters objectAtIndex:indexPath.section]) objectForKey:[NSString stringWithFormat:@"0.0"]];
         if([[totalStat objectAtIndex:1] integerValue] != 0)
         {
-            cell.textLabel.text = [NSString stringWithFormat:@"%d%%", [[totalStat objectAtIndex:0] integerValue]*100/[[totalStat objectAtIndex:1] integerValue]];
+            cell.textLabel.text = [NSString stringWithFormat:@"%ld%%", [[totalStat objectAtIndex:0] integerValue]*100/[[totalStat objectAtIndex:1] integerValue]];
             cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ / %@",[totalStat objectAtIndex:0],[totalStat objectAtIndex:1]];
         }
         else
@@ -111,8 +111,8 @@
     }
     else
     {
-        NSArray *chapterStat = [((NSDictionary *)[_chapters objectAtIndex:indexPath.section]) objectForKey:[NSString stringWithFormat:@"%d.%d",indexPath.section,indexPath.row+1]];
-        cell.textLabel.text = [NSString stringWithFormat:@"%d.%d %@: ",indexPath.section,indexPath.row+1,[chapterStat objectAtIndex:2]];
+        NSArray *chapterStat = [((NSDictionary *)[_chapters objectAtIndex:indexPath.section]) objectForKey:[NSString stringWithFormat:@"%ld.%ld",(long)indexPath.section,indexPath.row+1]];
+        cell.textLabel.text = [NSString stringWithFormat:@"%ld.%ld %@: ",(long)indexPath.section,indexPath.row+1,[chapterStat objectAtIndex:2]];
         if([[chapterStat objectAtIndex:1] integerValue] != 0)
         {
             cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ / %@",[chapterStat objectAtIndex:0],[chapterStat objectAtIndex:1]];
@@ -132,7 +132,7 @@
     }
     else
     {
-        return [NSString stringWithFormat:@"Chapter %d: %@",section, [((NSDictionary *)[_chapters objectAtIndex:section]) objectForKey:[NSString stringWithFormat:@"name"]]];
+        return [NSString stringWithFormat:@"Chapter %ld: %@",(long)section, [((NSDictionary *)[_chapters objectAtIndex:section]) objectForKey:[NSString stringWithFormat:@"name"]]];
     }
 }
 
