@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PracticeViewController.h"
 #import "ChaptersViewController.h"
-//#import "InputReader.h"
+#import "InputReader.h"
 
 /**
  ViewController for displaying the correct answer in Practice. Also handles determining whether an answer is correct and updates the statistics stored in the plist file. TODO: determine whether answer is correct and find alternative solutions (2x+3 and 3+2x are equal).

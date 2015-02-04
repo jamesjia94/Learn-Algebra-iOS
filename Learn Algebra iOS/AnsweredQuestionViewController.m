@@ -89,8 +89,7 @@
 }
 
 -(BOOL)checkAnswer{
-    return true;
-//    return [ComExequalsLearnguiPracticeMathInputReader compareEquationsWithNSString:_answerString withNSString:_textFieldString];
+    return [InputReader compareEquationsWithNSString:_answerString withNSString:_textFieldString];
 }
 
 - (void) updateStatistics: (BOOL) isCorrect{

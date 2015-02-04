@@ -36,12 +36,28 @@
 		4EF6AB59169BAB00001D7246 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EF6AB57169BAB00001D7246 /* InfoPlist.strings */; };
 		4EF6AB5C169BAB00001D7246 /* Learn_Algebra_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6AB5B169BAB00001D7246 /* Learn_Algebra_iOSTests.m */; };
 		626AC6D81A60AB4D006E42A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF6AB2A169BAB00001D7246 /* UIKit.framework */; };
+		C49EF4521A81DDA50004BA0B /* InputReader.java in Sources */ = {isa = PBXBuildFile; fileRef = C49EF4511A81DDA50004BA0B /* InputReader.java */; };
+		C49EF4561A81F9B90004BA0B /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C49EF4551A81F9B90004BA0B /* libicucore.dylib */; };
 		C4D66A851A732FA1004BB315 /* jqMath in Resources */ = {isa = PBXBuildFile; fileRef = C4D66A801A732FA1004BB315 /* jqMath */; };
 		C4D66A861A732FA1004BB315 /* lessons in Resources */ = {isa = PBXBuildFile; fileRef = C4D66A811A732FA1004BB315 /* lessons */; };
 		C4D66A871A732FA1004BB315 /* MathJax in Resources */ = {isa = PBXBuildFile; fileRef = C4D66A821A732FA1004BB315 /* MathJax */; };
 		C4D66A881A732FA1004BB315 /* problems in Resources */ = {isa = PBXBuildFile; fileRef = C4D66A831A732FA1004BB315 /* problems */; };
 		C4D66A891A732FA1004BB315 /* quicknotes in Resources */ = {isa = PBXBuildFile; fileRef = C4D66A841A732FA1004BB315 /* quicknotes */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		C49EF4541A81DE3A0004BA0B /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = sourcecode.java;
+			isEditable = 1;
+			outputFiles = (
+				"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.h",
+				"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.m",
+			);
+			script = "\"${HOME}/Downloads/j2objc-0.9.6/j2objc\" -use-arc -d \"${DERIVED_FILES_DIR}\" -sourcepath \"${PROJECT_DIR}/java\" --no-package-directories \"${INPUT_FILE_PATH}\";\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		4EF6AB52169BAB00001D7246 /* PBXContainerItemProxy */ = {
@@ -101,7 +117,8 @@
 		4EF6AB58169BAB00001D7246 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4EF6AB5A169BAB00001D7246 /* Learn_Algebra_iOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Learn_Algebra_iOSTests.h; sourceTree = "<group>"; };
 		4EF6AB5B169BAB00001D7246 /* Learn_Algebra_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Learn_Algebra_iOSTests.m; sourceTree = "<group>"; };
-		626AC6951A60A676006E42A1 /* libjre_emul.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjre_emul.a; path = "../j2objc-master/dist/lib/libjre_emul.a"; sourceTree = "<group>"; };
+		C49EF4511A81DDA50004BA0B /* InputReader.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = InputReader.java; path = java/InputReader.java; sourceTree = "<group>"; };
+		C49EF4551A81F9B90004BA0B /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		C4D66A801A732FA1004BB315 /* jqMath */ = {isa = PBXFileReference; lastKnownFileType = folder; name = jqMath; path = assets/jqMath; sourceTree = SOURCE_ROOT; };
 		C4D66A811A732FA1004BB315 /* lessons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lessons; path = assets/lessons; sourceTree = SOURCE_ROOT; };
 		C4D66A821A732FA1004BB315 /* MathJax */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MathJax; path = assets/MathJax; sourceTree = SOURCE_ROOT; };
@@ -114,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C49EF4561A81F9B90004BA0B /* libicucore.dylib in Frameworks */,
 				626AC6D81A60AB4D006E42A1 /* UIKit.framework in Frameworks */,
 				4EF6AB2D169BAB00001D7246 /* Foundation.framework in Frameworks */,
 				4EF6AB2F169BAB00001D7246 /* CoreGraphics.framework in Frameworks */,
@@ -159,6 +177,7 @@
 		4EF6AB1B169BAB00001D7246 = {
 			isa = PBXGroup;
 			children = (
+				C49EF4531A81DDAE0004BA0B /* java */,
 				1A48A7DD174EEFF700BC3AF6 /* Keyboard */,
 				4EF6AB30169BAB00001D7246 /* Learn Algebra iOS */,
 				4EF6AB54169BAB00001D7246 /* Learn Algebra iOSTests */,
@@ -179,7 +198,7 @@
 		4EF6AB29169BAB00001D7246 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				626AC6951A60A676006E42A1 /* libjre_emul.a */,
+				C49EF4551A81F9B90004BA0B /* libicucore.dylib */,
 				4EF6AB2A169BAB00001D7246 /* UIKit.framework */,
 				4EF6AB2C169BAB00001D7246 /* Foundation.framework */,
 				4EF6AB2E169BAB00001D7246 /* CoreGraphics.framework */,
@@ -256,6 +275,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C49EF4531A81DDAE0004BA0B /* java */ = {
+			isa = PBXGroup;
+			children = (
+				C49EF4511A81DDA50004BA0B /* InputReader.java */,
+			);
+			name = java;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -268,6 +295,7 @@
 				4EF6AB24169BAB00001D7246 /* Resources */,
 			);
 			buildRules = (
+				C49EF4541A81DE3A0004BA0B /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -378,6 +406,7 @@
 				4EF6AB37169BAB00001D7246 /* main.m in Sources */,
 				4EF6AB3B169BAB00001D7246 /* AppDelegate.m in Sources */,
 				4EF6AB47169BAB00001D7246 /* MainViewController.m in Sources */,
+				C49EF4521A81DDA50004BA0B /* InputReader.java in Sources */,
 				4E1A624216A1052100440103 /* ChaptersViewController.m in Sources */,
 				4E1A624A16A2274200440103 /* AboutPageViewController.m in Sources */,
 				4E281A7716A52DB800FEA85F /* ExpandableTableView.m in Sources */,
@@ -505,11 +534,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"/Documents/exequals/j2objc-master/dist/include",
+					"${HOME}/Downloads/j2objc-0.9.6/include",
 				);
 				INFOPLIST_FILE = "Learn Algebra iOS/Learn Algebra iOS-Info.plist";
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "${HOME}/Downloads/j2objc-0.9.6/lib";
 				MACOSX_DEPLOYMENT_TARGET = "";
+				OTHER_LDFLAGS = "-ljre_emul";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
@@ -524,11 +554,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"/Documents/exequals/j2objc-master/dist/include",
+					"${HOME}/Downloads/j2objc-0.9.6/include",
 				);
 				INFOPLIST_FILE = "Learn Algebra iOS/Learn Algebra iOS-Info.plist";
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "${HOME}/Downloads/j2objc-0.9.6/lib";
 				MACOSX_DEPLOYMENT_TARGET = "";
+				OTHER_LDFLAGS = "-ljre_emul";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
