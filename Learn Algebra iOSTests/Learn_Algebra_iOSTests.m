@@ -26,7 +26,7 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in Learn Algebra iOSTests");
+    XCTFail(@"Unit tests are not implemented yet in Learn Algebra iOSTests");
 }
 
 @end

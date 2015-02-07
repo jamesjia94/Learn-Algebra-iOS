@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 ExEquals. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface Learn_Algebra_iOSTests : SenTestCase
+@interface Learn_Algebra_iOSTests : XCTestCase
 
 @end
