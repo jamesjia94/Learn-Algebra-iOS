@@ -110,19 +110,32 @@
 
 - (void) animateTextField: (UITextField*) textField up: (BOOL) up height: (CGFloat) height
 {
-    const float movementDuration = 0.3f;
-    
-    CGFloat movement = (up ? -height : height);
-    [UIView beginAnimations: @"anim" context: nil];
-    [UIView setAnimationBeginsFromCurrentState: YES];
-    [UIView setAnimationDuration: movementDuration];
-    if (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])){
-        self.view.frame = CGRectOffset(self.view.frame, 0, movement/3);
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.3];
+    CGRect rect = self.view.frame;
+    if (up){
+        rect.origin.y -= height;
+        rect.size.height += height;
     }
     else{
-        self.textField.frame = CGRectOffset(self.textField.frame, 0, movement+50);
-        self.promptDisplay.frame = CGRectOffset(self.promptDisplay.frame, 0, movement+50);
+        rect.origin.y += height;
+        rect.size.height -= height;
     }
+    self.view.frame = rect;
+        
+//    const float movementDuration = 0.3f;
+//
+//    CGFloat movement = (up ? -height : height);
+//    [UIView beginAnimations: @"anim" context: nil];
+//    [UIView setAnimationBeginsFromCurrentState: YES];
+//    [UIView setAnimationDuration: movementDuration];
+//    if (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])){
+//        self.view.frame = CGRectOffset(self.view.frame, 0, movement/3);
+//    }
+//    else{
+//        self.textField.frame = CGRectOffset(self.textField.frame, 0, movement+50);
+//        self.promptDisplay.frame = CGRectOffset(self.promptDisplay.frame, 0, movement+50);
+//    }
     
     [UIView commitAnimations];
 }

@@ -30,7 +30,6 @@
 		4EF6AB41169BAB00001D7246 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF6AB40169BAB00001D7246 /* Default-568h@2x.png */; };
 		4EF6AB44169BAB00001D7246 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF6AB42169BAB00001D7246 /* MainStoryboard.storyboard */; };
 		4EF6AB47169BAB00001D7246 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6AB46169BAB00001D7246 /* MainViewController.m */; };
-		4EF6AB4F169BAB00001D7246 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF6AB4E169BAB00001D7246 /* SenTestingKit.framework */; };
 		4EF6AB50169BAB00001D7246 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF6AB2A169BAB00001D7246 /* UIKit.framework */; };
 		4EF6AB51169BAB00001D7246 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF6AB2C169BAB00001D7246 /* Foundation.framework */; };
 		4EF6AB59169BAB00001D7246 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EF6AB57169BAB00001D7246 /* InfoPlist.strings */; };
@@ -96,7 +95,6 @@
 		4EF6AB45169BAB00001D7246 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		4EF6AB46169BAB00001D7246 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		4EF6AB4D169BAB00001D7246 /* Learn Algebra iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Learn Algebra iOSTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EF6AB4E169BAB00001D7246 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4EF6AB56169BAB00001D7246 /* Learn Algebra iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Learn Algebra iOSTests-Info.plist"; sourceTree = "<group>"; };
 		4EF6AB58169BAB00001D7246 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4EF6AB5A169BAB00001D7246 /* Learn_Algebra_iOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Learn_Algebra_iOSTests.h; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EF6AB4F169BAB00001D7246 /* SenTestingKit.framework in Frameworks */,
 				4EF6AB50169BAB00001D7246 /* UIKit.framework in Frameworks */,
 				4EF6AB51169BAB00001D7246 /* Foundation.framework in Frameworks */,
 			);
@@ -183,7 +180,6 @@
 				4EF6AB2A169BAB00001D7246 /* UIKit.framework */,
 				4EF6AB2C169BAB00001D7246 /* Foundation.framework */,
 				4EF6AB2E169BAB00001D7246 /* CoreGraphics.framework */,
-				4EF6AB4E169BAB00001D7246 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -293,7 +289,7 @@
 			name = "Learn Algebra iOSTests";
 			productName = "Learn Algebra iOSTests";
 			productReference = 4EF6AB4D169BAB00001D7246 /* Learn Algebra iOSTests.octest */;
-			productType = "com.apple.product-type.bundle.ocunit-test";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -542,13 +538,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Learn Algebra iOS/Learn Algebra iOS-Prefix.pch";
 				INFOPLIST_FILE = "Learn Algebra iOSTests/Learn Algebra iOSTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -559,13 +555,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Learn Algebra iOS/Learn Algebra iOS-Prefix.pch";
 				INFOPLIST_FILE = "Learn Algebra iOSTests/Learn Algebra iOSTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
