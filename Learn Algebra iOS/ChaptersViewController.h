@@ -17,7 +17,9 @@
  */
 @interface ChaptersViewController :  ExpandableTableViewController <ExpandableTableViewDataSource, ExpandableTableViewDelegate>{
     NSMutableArray *dataModel;
+    NSMutableArray *chapterTitles;
 }
 
 @property (strong) NSMutableArray *dataModel;
+@property (strong) NSMutableArray *chapterTitles;
 @end

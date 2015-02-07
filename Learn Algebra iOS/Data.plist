@@ -27,7 +27,7 @@
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
-				<string>Solving Equation</string>
+				<string>Solving Equations</string>
 			</array>
 			<key>1.3</key>
 			<array>
@@ -214,7 +214,7 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>Radicals</string>
 			<key>7.1</key>
 			<array>
 				<integer>0</integer>

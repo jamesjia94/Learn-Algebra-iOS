@@ -53,6 +53,7 @@
 
 @implementation ChaptersViewController
 @synthesize dataModel = _dataModel;
+@synthesize chapterTitles = _chapterTitles;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -66,21 +67,49 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    if ([self.navigationItem.title isEqualToString:@"Quicknotes"]){
-        _dataModel = [NSMutableArray arrayWithObject:[NSMutableArray arrayWithObjects:@"1.0", @"2.0", @"3.0", @"4.0", @"5.0", @"6.0", @"7.0", nil]];
+    NSString *errorDesc = nil;
+    NSPropertyListFormat format = nil;
+    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *plistPath = [rootPath stringByAppendingString:@"Data.plist"];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
+        plistPath = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
+    }
+    NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
+    NSDictionary *plist = (NSDictionary *)[NSPropertyListSerialization
+                                           propertyListFromData:plistXML
+                                           mutabilityOption:NSPropertyListMutableContainersAndLeaves
+                                           format:&format
+                                           errorDescription:&errorDesc];
+    if (!plist) {
+        NSLog(@"Error reading plist: %@, format: %lu", errorDesc, format);
     }
     else{
-        _dataModel = [NSMutableArray arrayWithObjects:
-                      [NSMutableArray arrayWithObjects:@"1.1 Building Blocks of Algebra", @"1.2 Solving Equations", @"1.3 Solving Inequalities", @"1.4 Ratio and Proportions", @"1.5 Exponents", @"1.6 Negative Exponents", @"1.7 Scientific Notation", nil],
-                      [NSMutableArray arrayWithObjects:@"2.1 Rectangular Coordinate System", @"2.2 Graphing by Plotting Points/Intercept", @"2.3 Graphing using slopes and y-intercepts", @"2.4 Parallel and Perpendicular Lines", @"2.5 Introduction to Functions", nil],
-                      [NSMutableArray arrayWithObjects:@"3.1 Systems of Equations by Substitution", @"3.2 Systems of Equations by Elimination", @"3.3 Systems of Equations by Graphing", nil],
-                      [NSMutableArray arrayWithObjects:@"4.1 Introduction to Polynomials", @"4.2 Adding and Subtracting Polynomials", @"4.3 Multiplying and Dividing Polynomials", nil],
-                      [NSMutableArray arrayWithObjects: @"5.1 Simplifying Rational Expressions", @"5.2 Multiplying and Dividing Rational Expressions", @"5.3 Adding and Subtracting Rational Expressions", @"5.4 Complex Rational Expressions", @"5.5 Solving Rational Equations", nil],
-                      [NSMutableArray arrayWithObjects:@"6.1 Intorduction to Factoring", @"6.2 Factoring Trinomials", @"6.3 Factoring Binomials", @"6.4 Solving Equations by Factoring", nil],
-                      [NSMutableArray arrayWithObjects: @"7.1 Introduction to Radicals", @"7.2 Simplifying Radical Expressions", @"7.3 Adding and Subtracting Radical Expressions", @"7.4 Multiplying and Dividing Radical Expressions", @"7.5 Rational Exponents", @"7.6 Solving Radical Equations", nil],
-                      [NSMutableArray arrayWithObjects: @"8.1 Extracting Square Roots", @"8.2 Completing the Square", @"8.3 Quadratic Formula", @"8.4 Graphing Parabolas", nil],
-                      nil];
+        
+        NSMutableArray *allchaps = [plist objectForKey:@"Chapters"];
+        _dataModel = [NSMutableArray arrayWithCapacity:0];
+        _chapterTitles = [NSMutableArray arrayWithCapacity:0];
+        
+        if ([self.navigationItem.title isEqualToString:@"Quicknotes"]){
+            [_dataModel addObject:[NSMutableArray arrayWithCapacity:0]];
+            for (int i = 1; i  < allchaps.count; i++)
+            {
+                [_chapterTitles addObject:[NSString stringWithFormat:@"Ch. %d: %@", i, [allchaps[i] objectForKey:@"name"]]];
+                [_dataModel[0] addObject:[NSString stringWithFormat:@"%d.0", i]];
+            }
+        }
+        else{
+            for (int i = 1; i  < allchaps.count; i++) {
+                [_chapterTitles addObject:[NSString stringWithFormat:@"Ch. %d: %@", i, [allchaps[i] objectForKey:@"name"]]];
+                NSDictionary *chap = allchaps[i];
+                NSMutableArray *lessons = [NSMutableArray arrayWithCapacity:0];
+                for(int j = 1; j  <= [chap count] - 1; j++)
+                {
+                    NSString *lesNums = [NSString stringWithFormat:@"%d.%d", i, j];
+                    [lessons addObject:[lesNums stringByAppendingString:[NSString stringWithFormat:@" %@", [chap objectForKey:lesNums][2]]]];
+                }
+                [_dataModel addObject:lessons];
+            }
+        }
     }
 }
 
@@ -127,8 +156,13 @@
     static NSString *CellIdentifier = @"RowCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-	
-	cell.textLabel.text = [[_dataModel objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    
+    if ([self.navigationItem.title isEqualToString:@"Quicknotes"]){
+        cell.textLabel.text = [_chapterTitles objectAtIndex:indexPath.row];
+    }
+    else{
+        cell.textLabel.text = [[_dataModel objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    }
 	cell.backgroundView = [[UIView alloc] initWithFrame:CGRectZero];
 	cell.backgroundView.backgroundColor = [UIColor colorWithRed:232.0/255.0 green:243.0/255.0 blue:1.0 alpha:1.0];
 	
@@ -148,7 +182,7 @@
         cell.userInteractionEnabled=NO;
     }
     else{
-        cell.textLabel.text = [NSString stringWithFormat: @"Chapter %lu", section+1];
+        cell.textLabel.text = [NSString stringWithFormat: @"%@", _chapterTitles[section]];
     }
 	
 	cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ExpandableAccessoryView"] highlightedImage:[UIImage imageNamed:@"ExpandableAccessoryView"]];
@@ -181,9 +215,9 @@
     if ([[segue identifier] isEqualToString:@"loadQuicknotes"]){
         QuickNotesViewController *viewController = segue.destinationViewController;
         NSIndexPath *indexPath = (NSIndexPath *)sender;
-        NSString *lessonName = [NSString stringWithFormat:@"%@", [[_dataModel objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]];
-        viewController.navigationItem.title = [NSString stringWithFormat:@"Quicknotes: %@", lessonName];
-        [viewController setLesson:lessonName];
+        NSString *lessonName = [NSString stringWithFormat:@"%@", [_chapterTitles objectAtIndex:indexPath.row]];
+        viewController.navigationItem.title = [NSString stringWithFormat:@"%@", lessonName];
+        [viewController setLesson:[NSString stringWithFormat:@"%@", [[_dataModel objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]]];
     }
     else if ([[segue identifier] isEqualToString:@"loadPractice"]){
         PracticeViewController *viewController = segue.destinationViewController;
