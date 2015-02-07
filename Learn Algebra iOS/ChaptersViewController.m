@@ -159,13 +159,14 @@
     
     if ([self.navigationItem.title isEqualToString:@"Quicknotes"]){
         cell.textLabel.text = [_chapterTitles objectAtIndex:indexPath.row];
+        [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
     }
     else{
         cell.textLabel.text = [[_dataModel objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     }
 	cell.backgroundView = [[UIView alloc] initWithFrame:CGRectZero];
 	cell.backgroundView.backgroundColor = [UIColor colorWithRed:232.0/255.0 green:243.0/255.0 blue:1.0 alpha:1.0];
-	
+    
     return cell;
 }
 
@@ -178,6 +179,7 @@
 	
     if ([self.navigationItem.title isEqualToString:@"Quicknotes"]){
         cell.textLabel.text = @"Chapters";
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
         [tableView expandSection:section];
         cell.userInteractionEnabled=NO;
     }
