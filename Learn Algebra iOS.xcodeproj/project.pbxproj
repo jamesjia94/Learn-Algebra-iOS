@@ -35,6 +35,10 @@
 		4EF6AB59169BAB00001D7246 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EF6AB57169BAB00001D7246 /* InfoPlist.strings */; };
 		4EF6AB5C169BAB00001D7246 /* Learn_Algebra_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6AB5B169BAB00001D7246 /* Learn_Algebra_iOSTests.m */; };
 		626AC6D81A60AB4D006E42A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF6AB2A169BAB00001D7246 /* UIKit.framework */; };
+		C4D5C27D1AB3A8BA004A5248 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = C4D5C2791AB3A8BA004A5248 /* Icon-Small.png */; };
+		C4D5C27E1AB3A8BA004A5248 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4D5C27A1AB3A8BA004A5248 /* Icon-Small@2x.png */; };
+		C4D5C27F1AB3A8BA004A5248 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C4D5C27B1AB3A8BA004A5248 /* Icon.png */; };
+		C4D5C2801AB3A8BA004A5248 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4D5C27C1AB3A8BA004A5248 /* Icon@2x.png */; };
 		C4D66A851A732FA1004BB315 /* jqMath in Resources */ = {isa = PBXBuildFile; fileRef = C4D66A801A732FA1004BB315 /* jqMath */; };
 		C4D66A861A732FA1004BB315 /* lessons in Resources */ = {isa = PBXBuildFile; fileRef = C4D66A811A732FA1004BB315 /* lessons */; };
 		C4D66A871A732FA1004BB315 /* MathJax in Resources */ = {isa = PBXBuildFile; fileRef = C4D66A821A732FA1004BB315 /* MathJax */; };
@@ -100,6 +104,10 @@
 		4EF6AB5A169BAB00001D7246 /* Learn_Algebra_iOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Learn_Algebra_iOSTests.h; sourceTree = "<group>"; };
 		4EF6AB5B169BAB00001D7246 /* Learn_Algebra_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Learn_Algebra_iOSTests.m; sourceTree = "<group>"; };
 		626AC6951A60A676006E42A1 /* libjre_emul.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjre_emul.a; path = "../j2objc-master/dist/lib/libjre_emul.a"; sourceTree = "<group>"; };
+		C4D5C2791AB3A8BA004A5248 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		C4D5C27A1AB3A8BA004A5248 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		C4D5C27B1AB3A8BA004A5248 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		C4D5C27C1AB3A8BA004A5248 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		C4D66A801A732FA1004BB315 /* jqMath */ = {isa = PBXFileReference; lastKnownFileType = folder; name = jqMath; path = assets/jqMath; sourceTree = SOURCE_ROOT; };
 		C4D66A811A732FA1004BB315 /* lessons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lessons; path = assets/lessons; sourceTree = SOURCE_ROOT; };
 		C4D66A821A732FA1004BB315 /* MathJax */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MathJax; path = assets/MathJax; sourceTree = SOURCE_ROOT; };
@@ -221,6 +229,10 @@
 		4EF6AB31169BAB00001D7246 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C4D5C2791AB3A8BA004A5248 /* Icon-Small.png */,
+				C4D5C27A1AB3A8BA004A5248 /* Icon-Small@2x.png */,
+				C4D5C27B1AB3A8BA004A5248 /* Icon.png */,
+				C4D5C27C1AB3A8BA004A5248 /* Icon@2x.png */,
 				1A5BE530170529990045E2F9 /* Data.plist */,
 				4EF6AB32169BAB00001D7246 /* Learn Algebra iOS-Info.plist */,
 				4EF6AB33169BAB00001D7246 /* InfoPlist.strings */,
@@ -332,13 +344,17 @@
 				C4D66A871A732FA1004BB315 /* MathJax in Resources */,
 				4EF6AB35169BAB00001D7246 /* InfoPlist.strings in Resources */,
 				4EF6AB3D169BAB00001D7246 /* Default.png in Resources */,
+				C4D5C27E1AB3A8BA004A5248 /* Icon-Small@2x.png in Resources */,
+				C4D5C27F1AB3A8BA004A5248 /* Icon.png in Resources */,
 				4EF6AB3F169BAB00001D7246 /* Default@2x.png in Resources */,
 				C4D66A881A732FA1004BB315 /* problems in Resources */,
 				4EF6AB41169BAB00001D7246 /* Default-568h@2x.png in Resources */,
 				C4D66A851A732FA1004BB315 /* jqMath in Resources */,
 				4EF6AB44169BAB00001D7246 /* MainStoryboard.storyboard in Resources */,
+				C4D5C27D1AB3A8BA004A5248 /* Icon-Small.png in Resources */,
 				4EB8B5E616B341010066A596 /* CustomKeyboard.xib in Resources */,
 				C4D66A861A732FA1004BB315 /* lessons in Resources */,
+				C4D5C2801AB3A8BA004A5248 /* Icon@2x.png in Resources */,
 				4E8CFB7F16B7518700648642 /* iOS_Keyboard.png in Resources */,
 				C4D66A891A732FA1004BB315 /* quicknotes in Resources */,
 				1A5BE531170529990045E2F9 /* Data.plist in Resources */,
