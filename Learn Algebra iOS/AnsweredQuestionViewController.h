@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property int chapter;
 @property int lesson;
+@property NSString *promptString;
+@property NSString *questionString;
 @property NSString *answerString;
 @property NSString *explanationString;
 @property NSString *typeString;

@@ -11,6 +11,8 @@
 @interface PracticeViewController ()
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UITextView *promptDisplay;
+@property NSString *promptString;
+@property  NSString *questionString;
 @property  NSString *answerString;
 @property  NSString *explanationString;
 @property NSString *typeString;
@@ -72,6 +74,8 @@
 @end
 
 @implementation PracticeViewController
+@synthesize promptString=_promptString;
+@synthesize questionString=_questionString;
 @synthesize explanationString=_explanationString;
 @synthesize answerString = _answerString;
 @synthesize lesson=_lesson;
@@ -157,17 +161,42 @@
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([[segue identifier] isEqualToString:@"answerViewSegue"]) {
         AnsweredQuestionViewController *vc = [segue destinationViewController];
+        [vc setPromptString:_promptString];
+        [vc setQuestionString:_questionString];
         [vc setExplanationString:_explanationString];
         [vc setAnswerString:_answerString];
         NSArray* parsedLesson = [_lesson componentsSeparatedByString:@"."];
-        [vc setChapter:
-         ((NSString *)[parsedLesson objectAtIndex:0]).integerValue];
-        [vc setLesson:
-         ((NSString *)[parsedLesson objectAtIndex:1]).integerValue];
+        [vc setChapter: ((NSString *)[parsedLesson objectAtIndex:0]).integerValue];
+        [vc setLesson: ((NSString *)[parsedLesson objectAtIndex:1]).integerValue];
         [vc setTypeString:_typeString];
         [vc setTextFieldString:self.textField.text];
         vc.navigationItem.title = self.navigationItem.title;
     }
+}
+
+-(NSString*) exponize:(NSString*)str {
+    if(str == nil)
+    {
+        return @"Answer:";
+    }
+    
+    NSString* result = str;
+    
+    result = [result stringByReplacingOccurrencesOfString: @"\n" withString:@"<br>"];;
+    NSError *error = NULL;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\^(\\(.+?\\))" options:0 error:&error];
+    result = [regex stringByReplacingMatchesInString:result options:0 range:NSMakeRange(0, [result length]) withTemplate:@"<sup><small>$1</small></sup>"];
+    regex = [NSRegularExpression regularExpressionWithPattern:@"\\^(-?\\d+)" options:0 error:&error];
+    result = [regex stringByReplacingMatchesInString:result options:0 range:NSMakeRange(0, [result length]) withTemplate:@"<sup><small>$1</small></sup>"];
+    regex = [NSRegularExpression regularExpressionWithPattern:@"\\^\\{(.+?)\\}" options:0 error:&error];
+    result = [regex stringByReplacingMatchesInString:result options:0 range:NSMakeRange(0, [result length]) withTemplate:@"<sup><small>$1</small></sup>"];
+    regex = [NSRegularExpression regularExpressionWithPattern:@"log(-?\\w+)\\(" options:0 error:&error];
+    result = [regex stringByReplacingMatchesInString:result options:0 range:NSMakeRange(0, [result length]) withTemplate:@"log<sub><small>$1</small></sub>\\("];
+    regex = [NSRegularExpression regularExpressionWithPattern:@"_(\\d+)" options:0 error:&error];
+    result = [regex stringByReplacingMatchesInString:result options:0 range:NSMakeRange(0, [result length]) withTemplate:@"<sub><small><small>$1</small></small></sub>"];
+    regex = [NSRegularExpression regularExpressionWithPattern:@"_\\{(.+?)\\}" options:0 error:&error];
+    result = [regex stringByReplacingMatchesInString:result options:0 range:NSMakeRange(0, [result length]) withTemplate:@"<sub><small><small>$1</small></small></sub>"];
+    return result;
 }
 
 -(void) displayProblem{
@@ -178,20 +207,15 @@
     NSDictionary *json =[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     NSArray *problemsArray = [json objectForKey:@"problemsArray"];
     NSDictionary *pickedQuestion=[problemsArray objectAtIndex:arc4random_uniform([problemsArray count])];
-    self.answerString = [pickedQuestion objectForKey:@"answer"];
-    self.explanationString = [pickedQuestion objectForKey:@"explanation"];
-    NSString *prompt = [pickedQuestion objectForKey:@"prompt"];
-    NSString *question = [pickedQuestion objectForKey:@"question"];
+    self.promptString = [self exponize:[pickedQuestion objectForKey:@"prompt"]];
+    self.questionString = [self exponize:[pickedQuestion objectForKey:@"question"]];
+    self.answerString = [self exponize:[pickedQuestion objectForKey:@"answer"]];
+    self.explanationString = [self exponize:[pickedQuestion objectForKey:@"explanation"]];
     self.typeString= [pickedQuestion objectForKey:@"type"];
 
-    if (prompt == nil){
-        _promptDisplay.text = @"Answer:";
-    }
-    else{
-        _promptDisplay.text=prompt;
-    }
+    _promptDisplay.text=self.promptString;
     if ([_typeString isEqualToString:JQMATH]){
-        [_webView loadHTMLString:[NSString stringWithFormat:@"%@%@",question,JQMATHHEADER] baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
+        [_webView loadHTMLString:[NSString stringWithFormat:@"%@%@",_questionString,JQMATHHEADER] baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
     }
     else if ([_typeString isEqualToString:GRAPH]){
         
@@ -200,10 +224,10 @@
         
     }
     else if ([_typeString isEqualToString:TEXT]){
-        [_webView loadHTMLString:question baseURL:nil];
+        [_webView loadHTMLString:_questionString baseURL:nil];
     }
     else if ([_typeString isEqualToString:MATHJAX]){
-        [_webView loadHTMLString:[NSString stringWithFormat:@"%@%@",question, MATHJAXHEADER] baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
+        [_webView loadHTMLString:[NSString stringWithFormat:@"%@%@",_questionString, MATHJAXHEADER] baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
     }
     [self resizeTextView: _promptDisplay];
 }

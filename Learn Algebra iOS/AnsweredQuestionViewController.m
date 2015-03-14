@@ -36,6 +36,8 @@
 
 @implementation AnsweredQuestionViewController
 @synthesize lesson=_lesson;
+@synthesize promptString=_promptString;
+@synthesize questionString=_questionString;
 @synthesize answerString=_answerString;
 @synthesize explanationString = _explanationString;
 @synthesize textFieldString = _textFieldString;
@@ -64,11 +66,11 @@
 -(void) displayAnswer{
     NSString* htmlString;
     if ([self checkAnswer]){
-        htmlString = [NSString stringWithFormat:@"You are Correct!<br/>The answer is: %@.",_answerString];
+        htmlString = [NSString stringWithFormat:@"<div style='text-align: center;'><h1 style='color: green;'>Correct!</h1><div style='text-align: left; color: gray'>%@</div><br/><h3>%@ %@</h3></div>",_questionString,_promptString,_answerString];
         [self updateStatistics:YES];
     }
     else{
-        htmlString = [NSString stringWithFormat:@"The correct answer is: %@. <br/><br/>%@",_answerString,_explanationString];
+        htmlString = [NSString stringWithFormat:@"<div style='text-align: center;'><h1 style='color: red;'>Incorrect</h1><div style='text-align: left; color: gray'>%@</div><br/>%@<br/><br/><h3>%@ %@<h3></div>",_questionString,_explanationString,_promptString,_answerString];
         [self updateStatistics:NO];
     }
     if ([_typeString isEqualToString:JQMATH]){
@@ -88,8 +90,8 @@
     }
 }
 
--(BOOL)checkAnswer{
-    return true;
+-(BOOL)checkAnswer {
+    return false;
 //    return [ComExequalsLearnguiPracticeMathInputReader compareEquationsWithNSString:_answerString withNSString:_textFieldString];
 }
 
